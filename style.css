@@ -25,3 +25,32 @@
   .brand { width:190px; height:50px; flex-basis:190px; }
   .brand-logo { width:190px !important; height:48px !important; max-width:190px !important; max-height:48px !important; }
 }
+
+/* V4 PREMIUM POLISH */
+.business-snapshot{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-bottom:1px solid var(--line);padding:0 7vw;box-shadow:0 8px 25px rgba(21,43,105,.04)}
+.business-snapshot div{padding:24px 20px;border-right:1px solid var(--line);text-align:center}
+.business-snapshot div:last-child{border-right:0}
+.business-snapshot strong{display:block;font-size:25px;color:var(--navy);line-height:1.1}
+.business-snapshot span{display:block;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:.6px;margin-top:5px}
+.mini-cta{margin:0 7vw 90px;padding:48px 55px;border:1px solid #dfe6db;border-radius:24px;background:linear-gradient(100deg,#f7faf5,#fff);display:flex;align-items:center;justify-content:space-between;gap:35px}
+.mini-cta h2{color:var(--navy);font-size:clamp(28px,3vw,42px);line-height:1.1;margin-bottom:8px}
+.mini-cta p:not(.eyebrow){color:var(--muted);font-size:14px}
+.mini-cta .button{white-space:nowrap}
+.service-card{overflow:hidden}
+.service-card:before{content:"";position:absolute;left:0;top:0;width:4px;height:0;background:var(--green);transition:.25s}
+.service-card:hover:before{height:100%}
+.contact-card{transition:.2s}
+.contact-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(21,43,105,.08)}
+@media(max-width:950px){
+.business-snapshot{grid-template-columns:repeat(2,1fr)}
+.business-snapshot div:nth-child(2){border-right:0}
+.business-snapshot div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+}
+@media(max-width:700px){
+.business-snapshot{grid-template-columns:1fr 1fr;padding:0 24px}
+.business-snapshot div{padding:18px 8px}
+.mini-cta{margin:0 24px 65px;padding:32px 25px;display:block}
+.mini-cta .button{margin-top:20px}
+}
+
+.nav a.active{color:var(--green)}
