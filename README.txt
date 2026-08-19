@@ -1,23 +1,13 @@
-ELITE HORIZON WEBSITE — COMPLETE PACKAGE
+ELITE HORIZON — FIXED COMPLETE WEBSITE
 
-Upload the entire folder contents to your GitHub repository.
+This package fixes the broken-image problem visible on the live site.
 
-Files:
+Upload/replace:
 - index.html
-- assets/logo.jpg
+- assets/ (entire folder)
 
 IMPORTANT:
-The supplied HTML references these additional asset files:
-hero.jpg
-dry-food.jpg
-packing.jpg
-safety.jpg
-technology.jpg
-frozen.jpg
-industries.jpg
-commitment.jpg
+Replace the existing assets folder with this one, or upload these files into the existing assets folder.
+Do NOT upload only index.html.
 
-If those files already exist in your GitHub repository's assets folder, KEEP THEM.
-If they are available locally, place them in this assets folder before uploading.
-
-The index.html already contains the premium animations and scroll reveal effects.
+The logo is now logo.png and all hero/product/industry/commitment images are included locally.
