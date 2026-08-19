@@ -208,6 +208,57 @@ header.site-header .container{
   .navlinks a{font-size:12px !important}
 }
 
+
+/* FINAL STABILITY FIX */
+section.eh-reveal{
+  min-height:0;
+}
+
+
+/* FINAL HERO LAYOUT FIX */
+header.site-header{
+  height:auto !important;
+  min-height:760px !important;
+  padding:0 !important;
+  display:grid !important;
+  align-items:stretch !important;
+  background:linear-gradient(135deg,#10175c 0%,#20206a 46%,#0f5e6b 100%) !important;
+  overflow:hidden !important;
+}
+header.site-header.hero .container{
+  height:auto !important;
+  min-height:760px !important;
+  display:grid !important;
+  align-items:center !important;
+}
+nav{
+  height:76px !important;
+  min-height:76px !important;
+  position:relative !important;
+  z-index:20 !important;
+  background:#fff !important;
+}
+@media(max-width:900px){
+  nav{height:68px !important;min-height:68px !important}
+  header.site-header,
+  header.site-header.hero,
+  header.site-header.hero .container{
+    min-height:760px !important;
+  }
+}
+@media(max-width:560px){
+  nav{height:auto !important;min-height:64px !important}
+  header.site-header,
+  header.site-header.hero,
+  header.site-header.hero .container{
+    min-height:0 !important;
+  }
+  header.site-header.hero .container{
+    padding-top:75px !important;
+    padding-bottom:70px !important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -217,7 +268,7 @@ header.site-header .container{
 <a class="btn mobile" href="tel:+966540788355">Call</a>
 </div></nav>
 
-<header class="site-header" id="home" class="hero"><div class="container">
+<header class="site-header hero" id="home"><div class="container">
 <div>
 <div class="kicker">QUALITY PRODUCTS · TRUSTED SOLUTIONS</div>
 <h1>Trading solutions built for <span>business.</span></h1>
@@ -258,7 +309,7 @@ header.site-header .container{
 <div class="product"><img src="assets/technology.jpg"><div class="overlay"><h3>Technology</h3><p>Networking, connectivity and computer accessories with sourcing and support.</p><div class="tags"><span class="tag">USB</span><span class="tag">HDMI</span><span class="tag">LAN</span><span class="tag">Fiber</span></div></div></div>
 </div></div></section>
 
-<section class="why" class="eh-reveal"><div class="container whygrid"><div><div class="eyebrow">Why Choose Us?</div><h2 class="title">A dependable supply partner.</h2><p class="lead">We focus on quality, value, timely delivery and long-term customer relationships.</p>
+<section class="why eh-reveal"><div class="container whygrid"><div><div class="eyebrow">Why Choose Us?</div><h2 class="title">A dependable supply partner.</h2><p class="lead">We focus on quality, value, timely delivery and long-term customer relationships.</p>
 <div class="reason"><div class="icon">01</div><div><b>Premium Quality</b><p>We source and supply only the best.</p></div></div>
 <div class="reason"><div class="icon">02</div><div><b>Competitive Pricing</b><p>Affordable solutions that add value.</p></div></div>
 <div class="reason"><div class="icon">03</div><div><b>Timely Delivery</b><p>On-time delivery, every time.</p></div></div>
@@ -266,7 +317,7 @@ header.site-header .container{
 <div class="reason"><div class="icon">05</div><div><b>Excellent Support</b><p>We value long-term relationships.</p></div></div>
 </div><div class="whyimg"><img src="assets/industries.jpg" alt="Business partnership"></div></div></section>
 
-<section id="industries" class="industries" class="eh-reveal"><div class="container"><div class="eyebrow">Industries We Serve</div><h2 class="title">Serving diverse business sectors.</h2><p class="lead" style="margin:auto">We proudly supply our products and services to a wide range of industries.</p>
+<section id="industries" class="industries eh-reveal"><div class="container"><div class="eyebrow">Industries We Serve</div><h2 class="title">Serving diverse business sectors.</h2><p class="lead" style="margin:auto">We proudly supply our products and services to a wide range of industries.</p>
 <div class="industrygrid">
 <div class="ind eh-reveal"><span>🍽️</span>Restaurants & Catering</div><div class="ind eh-reveal"><span>🏨</span>Hotels & Hospitality</div><div class="ind eh-reveal"><span>🏭</span>Food Processing</div><div class="ind eh-reveal"><span>🛒</span>Retail & Supermarkets</div><div class="ind eh-reveal"><span>🏗️</span>Construction</div><div class="ind eh-reveal"><span>🚚</span>Logistics & Transportation</div><div class="ind eh-reveal"><span>🏛️</span>Institutions & Government</div>
 </div><div class="industry-img"><img src="assets/industries.jpg" alt="Industries served"></div></div></section>
@@ -274,7 +325,7 @@ header.site-header .container{
 <section class="eh-reveal"><div class="container commit"><div><div class="eyebrow">Our Commitment</div><h2 class="title">Built around trust and consistency.</h2><p class="lead">Our commitment is to deliver reliable solutions while building strong, transparent and long-term partnerships.</p>
 <div class="checklist"><div class="check"><i>✓</i><b>Delivering quality products consistently</b></div><div class="check"><i>✓</i><b>Maintaining fair and transparent business practices</b></div><div class="check"><i>✓</i><b>Ensuring customer satisfaction at every step</b></div><div class="check"><i>✓</i><b>Supporting clients with reliable solutions</b></div><div class="check"><i>✓</i><b>Building long-term partnerships</b></div><div class="check"><i>✓</i><b>Contributing to a safer and better tomorrow</b></div></div></div><img src="assets/commitment.jpg" alt="Elite Horizon commitment"></div></section>
 
-<section id="contact" class="contact" class="eh-reveal"><div class="container"><div class="contactbox">
+<section id="contact" class="contact eh-reveal"><div class="container"><div class="contactbox">
 <div><div class="eyebrow">Let's Work Together</div><h2 class="title">Need a reliable supply partner?</h2><p class="lead">Tell us what you need and the Elite Horizon team can help with sourcing and supply.</p><div class="actions"><a class="btn" href="https://wa.me/966540788355">WhatsApp Us</a><a class="btn outline" href="mailto:info@elitetrdksa.com">Email Us</a></div></div>
 <div class="contact-card"><h3 style="color:var(--navy);margin-top:0">Contact Details</h3><div class="contact-list">
 <div class="contact-item"><b>📍 Address</b><span>Khalid Ibn Al Waleed Street, Ash Sharafiyah District 2661, Jeddah 23216, Kingdom of Saudi Arabia</span></div>
