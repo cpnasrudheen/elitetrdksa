@@ -72,6 +72,35 @@ footer{background:#10174c;color:#fff;padding:35px 0}.foot{display:flex;justify-c
 @media(max-width:560px){
 section{padding:75px 0}.grid,.values{grid-template-columns:1fr}.industrygrid{grid-template-columns:1fr 1fr}.hero h1{font-size:48px}.stats{gap:18px}.brand span{font-size:14px}
 }
+
+/* Elite Horizon premium motion */
+@keyframes ehFadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@keyframes ehFloat{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-9px)}}
+.hero .kicker{animation:ehFadeUp .7s ease both}
+.hero h1{animation:ehFadeUp .8s .08s ease both}
+.hero p{animation:ehFadeUp .8s .16s ease both}
+.hero .actions{animation:ehFadeUp .8s .24s ease both}
+.hero .stats{animation:ehFadeUp .8s .32s ease both}
+.hero-card{animation:ehFadeUp .9s .1s ease both,ehFloat 5s 1s ease-in-out infinite}
+.btn{transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
+.btn:hover{transform:translateY(-3px);filter:saturate(1.08);box-shadow:0 14px 30px rgba(38,148,71,.28)}
+.btn.gold:hover{box-shadow:0 14px 30px rgba(242,173,27,.28)}
+.card,.value,.ind,.contact-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover,.value:hover,.ind:hover,.contact-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(20,30,50,.12);border-color:#d7e0ea}
+.product{transition:transform .35s ease,box-shadow .35s ease}
+.product:hover{transform:translateY(-7px);box-shadow:0 22px 50px rgba(7,14,37,.18)}
+.product img{transition:transform .55s ease,filter .35s ease}
+.product:hover img{transform:scale(1.045);filter:brightness(.62)}
+.reason{transition:padding-left .25s ease}.reason:hover{padding-left:8px}
+.icon{transition:transform .25s ease}.reason:hover .icon{transform:rotate(6deg) scale(1.06)}
+.brand img{transition:transform .25s ease}.brand:hover img{transform:scale(1.05)}
+.navlinks a{position:relative;transition:color .2s ease}
+.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--green);transition:right .25s ease}
+.navlinks a:hover:after{right:0}
+.eh-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.eh-reveal.eh-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
 </style>
 </head>
 <body>
@@ -92,29 +121,29 @@ section{padding:75px 0}.grid,.values{grid-template-columns:1fr}.industrygrid{gri
 <div class="hero-card"><img src="assets/hero.jpg" alt="Elite Horizon catalogue visual"></div>
 </div></header>
 
-<section id="about"><div class="container about">
+<section id="about" class="eh-reveal"><div class="container about">
 <div><div class="eyebrow">About Us</div><h2 class="title">Reliable supply. Long-term partnerships.</h2>
 <p class="lead">With over 5 years of experience, Elite Horizon is a dynamic, customer-focused company specializing in the supply of dry food, packing & plastic items, safety items, technology & connectivity products and frozen items.</p>
 <p class="lead">Our mission is to provide superior quality products and consulting solutions that enhance our customers' success while maintaining high standards of integrity and professionalism.</p>
 <div class="values">
-<div class="value"><b>Integrity & Transparency</b><span>Fair and professional business practices.</span></div>
-<div class="value"><b>Quality & Excellence</b><span>Consistent product and service quality.</span></div>
-<div class="value"><b>Customer Satisfaction</b><span>Solutions shaped around client needs.</span></div>
-<div class="value"><b>Innovation & Growth</b><span>Building better solutions for tomorrow.</span></div>
+<div class="value eh-reveal"><b>Integrity & Transparency</b><span>Fair and professional business practices.</span></div>
+<div class="value eh-reveal"><b>Quality & Excellence</b><span>Consistent product and service quality.</span></div>
+<div class="value eh-reveal"><b>Customer Satisfaction</b><span>Solutions shaped around client needs.</span></div>
+<div class="value eh-reveal"><b>Innovation & Growth</b><span>Building better solutions for tomorrow.</span></div>
 </div></div>
 <div class="about-img"><img src="assets/hero.jpg" alt="Saudi Arabia business environment"></div>
 </div></section>
 
-<section id="business" class="business"><div class="container"><div class="eyebrow">Our Core Business</div><h2 class="title">One partner. Multiple supply categories.</h2><p class="lead">A comprehensive range of high-quality products and services tailored to meet the needs of our customers.</p>
+<section id="business" class="business" class="eh-reveal"><div class="container"><div class="eyebrow">Our Core Business</div><h2 class="title">One partner. Multiple supply categories.</h2><p class="lead">A comprehensive range of high-quality products and services tailored to meet the needs of our customers.</p>
 <div class="grid">
-<div class="card"><img src="assets/dry-food.jpg"><div class="card-body"><h3>Dry Food Supply</h3><p>Rice, flour, pulses, beans, sugar, salt, spices, oils, nuts, dates, canned foods, tea and beverages.</p></div></div>
-<div class="card"><img src="assets/packing.jpg"><div class="card-body"><h3>Packing & Plastic</h3><p>Bags, food containers, disposable items, bottles, storage, wraps, foil, paper and hygiene products.</p></div></div>
-<div class="card"><img src="assets/safety.jpg"><div class="card-body"><h3>Safety Items</h3><p>Helmets, safety shoes, gloves, protective wear, goggles, masks, reflective wear and first aid.</p></div></div>
-<div class="card"><img src="assets/technology.jpg"><div class="card-body"><h3>Technology & Connectivity</h3><p>Adapters, converters, USB hubs, computer accessories, network cables, HDMI, LAN adapters and chargers.</p></div></div>
-<div class="card"><img src="assets/frozen.jpg"><div class="card-body"><h3>Frozen Items</h3><p>Frozen vegetables, fruits, meat & poultry, seafood, ready-to-cook products and other frozen items.</p></div></div>
+<div class="card eh-reveal"><img src="assets/dry-food.jpg"><div class="card-body"><h3>Dry Food Supply</h3><p>Rice, flour, pulses, beans, sugar, salt, spices, oils, nuts, dates, canned foods, tea and beverages.</p></div></div>
+<div class="card eh-reveal"><img src="assets/packing.jpg"><div class="card-body"><h3>Packing & Plastic</h3><p>Bags, food containers, disposable items, bottles, storage, wraps, foil, paper and hygiene products.</p></div></div>
+<div class="card eh-reveal"><img src="assets/safety.jpg"><div class="card-body"><h3>Safety Items</h3><p>Helmets, safety shoes, gloves, protective wear, goggles, masks, reflective wear and first aid.</p></div></div>
+<div class="card eh-reveal"><img src="assets/technology.jpg"><div class="card-body"><h3>Technology & Connectivity</h3><p>Adapters, converters, USB hubs, computer accessories, network cables, HDMI, LAN adapters and chargers.</p></div></div>
+<div class="card eh-reveal"><img src="assets/frozen.jpg"><div class="card-body"><h3>Frozen Items</h3><p>Frozen vegetables, fruits, meat & poultry, seafood, ready-to-cook products and other frozen items.</p></div></div>
 </div></div></section>
 
-<section id="products"><div class="container"><div class="eyebrow">Product Categories</div><h2 class="title">Supply categories at a glance.</h2>
+<section id="products" class="eh-reveal"><div class="container"><div class="eyebrow">Product Categories</div><h2 class="title">Supply categories at a glance.</h2>
 <div class="products">
 <div class="product"><img src="assets/dry-food.jpg"><div class="overlay"><h3>Dry Food</h3><p>Premium products sourced from trusted suppliers to ensure freshness and long shelf life.</p><div class="tags"><span class="tag">Rice</span><span class="tag">Pulses</span><span class="tag">Spices</span><span class="tag">Oils</span><span class="tag">Beverages</span></div></div></div>
 <div class="product"><img src="assets/frozen.jpg"><div class="overlay"><h3>Frozen Foods</h3><p>Carefully preserved products designed to maintain freshness, quality and taste.</p><div class="tags"><span class="tag">Vegetables</span><span class="tag">Fruits</span><span class="tag">Meat</span><span class="tag">Seafood</span></div></div></div>
@@ -122,7 +151,7 @@ section{padding:75px 0}.grid,.values{grid-template-columns:1fr}.industrygrid{gri
 <div class="product"><img src="assets/technology.jpg"><div class="overlay"><h3>Technology</h3><p>Networking, connectivity and computer accessories with sourcing and support.</p><div class="tags"><span class="tag">USB</span><span class="tag">HDMI</span><span class="tag">LAN</span><span class="tag">Fiber</span></div></div></div>
 </div></div></section>
 
-<section class="why"><div class="container whygrid"><div><div class="eyebrow">Why Choose Us?</div><h2 class="title">A dependable supply partner.</h2><p class="lead">We focus on quality, value, timely delivery and long-term customer relationships.</p>
+<section class="why" class="eh-reveal"><div class="container whygrid"><div><div class="eyebrow">Why Choose Us?</div><h2 class="title">A dependable supply partner.</h2><p class="lead">We focus on quality, value, timely delivery and long-term customer relationships.</p>
 <div class="reason"><div class="icon">01</div><div><b>Premium Quality</b><p>We source and supply only the best.</p></div></div>
 <div class="reason"><div class="icon">02</div><div><b>Competitive Pricing</b><p>Affordable solutions that add value.</p></div></div>
 <div class="reason"><div class="icon">03</div><div><b>Timely Delivery</b><p>On-time delivery, every time.</p></div></div>
@@ -130,15 +159,15 @@ section{padding:75px 0}.grid,.values{grid-template-columns:1fr}.industrygrid{gri
 <div class="reason"><div class="icon">05</div><div><b>Excellent Support</b><p>We value long-term relationships.</p></div></div>
 </div><div class="whyimg"><img src="assets/industries.jpg" alt="Business partnership"></div></div></section>
 
-<section id="industries" class="industries"><div class="container"><div class="eyebrow">Industries We Serve</div><h2 class="title">Serving diverse business sectors.</h2><p class="lead" style="margin:auto">We proudly supply our products and services to a wide range of industries.</p>
+<section id="industries" class="industries" class="eh-reveal"><div class="container"><div class="eyebrow">Industries We Serve</div><h2 class="title">Serving diverse business sectors.</h2><p class="lead" style="margin:auto">We proudly supply our products and services to a wide range of industries.</p>
 <div class="industrygrid">
-<div class="ind"><span>🍽️</span>Restaurants & Catering</div><div class="ind"><span>🏨</span>Hotels & Hospitality</div><div class="ind"><span>🏭</span>Food Processing</div><div class="ind"><span>🛒</span>Retail & Supermarkets</div><div class="ind"><span>🏗️</span>Construction</div><div class="ind"><span>🚚</span>Logistics & Transportation</div><div class="ind"><span>🏛️</span>Institutions & Government</div>
+<div class="ind eh-reveal"><span>🍽️</span>Restaurants & Catering</div><div class="ind eh-reveal"><span>🏨</span>Hotels & Hospitality</div><div class="ind eh-reveal"><span>🏭</span>Food Processing</div><div class="ind eh-reveal"><span>🛒</span>Retail & Supermarkets</div><div class="ind eh-reveal"><span>🏗️</span>Construction</div><div class="ind eh-reveal"><span>🚚</span>Logistics & Transportation</div><div class="ind eh-reveal"><span>🏛️</span>Institutions & Government</div>
 </div><div class="industry-img"><img src="assets/industries.jpg" alt="Industries served"></div></div></section>
 
-<section><div class="container commit"><div><div class="eyebrow">Our Commitment</div><h2 class="title">Built around trust and consistency.</h2><p class="lead">Our commitment is to deliver reliable solutions while building strong, transparent and long-term partnerships.</p>
+<section class="eh-reveal"><div class="container commit"><div><div class="eyebrow">Our Commitment</div><h2 class="title">Built around trust and consistency.</h2><p class="lead">Our commitment is to deliver reliable solutions while building strong, transparent and long-term partnerships.</p>
 <div class="checklist"><div class="check"><i>✓</i><b>Delivering quality products consistently</b></div><div class="check"><i>✓</i><b>Maintaining fair and transparent business practices</b></div><div class="check"><i>✓</i><b>Ensuring customer satisfaction at every step</b></div><div class="check"><i>✓</i><b>Supporting clients with reliable solutions</b></div><div class="check"><i>✓</i><b>Building long-term partnerships</b></div><div class="check"><i>✓</i><b>Contributing to a safer and better tomorrow</b></div></div></div><img src="assets/commitment.jpg" alt="Elite Horizon commitment"></div></section>
 
-<section id="contact" class="contact"><div class="container"><div class="contactbox">
+<section id="contact" class="contact" class="eh-reveal"><div class="container"><div class="contactbox">
 <div><div class="eyebrow">Let's Work Together</div><h2 class="title">Need a reliable supply partner?</h2><p class="lead">Tell us what you need and the Elite Horizon team can help with sourcing and supply.</p><div class="actions"><a class="btn" href="https://wa.me/966540788355">WhatsApp Us</a><a class="btn outline" href="mailto:info@elitetrdksa.com">Email Us</a></div></div>
 <div class="contact-card"><h3 style="color:var(--navy);margin-top:0">Contact Details</h3><div class="contact-list">
 <div class="contact-item"><b>📍 Address</b><span>Khalid Ibn Al Waleed Street, Ash Sharafiyah District 2661, Jeddah 23216, Kingdom of Saudi Arabia</span></div>
@@ -149,5 +178,28 @@ section{padding:75px 0}.grid,.values{grid-template-columns:1fr}.industrygrid{gri
 </div></div></section>
 
 <footer><div class="container foot"><div><strong>ELITE HORIZON</strong><small style="display:block">Trading & Consulting Company</small></div><small>Quality Products. Trusted Solutions.</small></div></footer>
+
+<script>
+(() => {
+  const items = document.querySelectorAll('.eh-reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('eh-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('eh-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
+  items.forEach((el,i) => {
+    el.style.transitionDelay = Math.min((i % 5) * 70, 280) + 'ms';
+    observer.observe(el);
+  });
+})();
+</script>
+
 </body>
 </html>
