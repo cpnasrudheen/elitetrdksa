@@ -105,16 +105,119 @@ section{padding:75px 0}.grid,.values{grid-template-columns:1fr}.industrygrid{gri
 img{max-width:100%;height:auto}
 .hero-card img,.about-img img,.card img{display:block;width:100%;object-fit:cover}
 
+
+/* FINAL LOGO FIX */
+.brand{
+  display:flex !important;
+  align-items:center !important;
+  flex:0 0 auto !important;
+  width:auto !important;
+  max-width:none !important;
+  overflow:visible !important;
+}
+.brand img{
+  display:block !important;
+  width:280px !important;
+  max-width:280px !important;
+  height:auto !important;
+  max-height:64px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  overflow:visible !important;
+}
+header{
+  overflow:visible !important;
+}
+@media (max-width: 900px){
+  .brand img{
+    width:220px !important;
+    max-width:220px !important;
+    max-height:54px !important;
+  }
+}
+@media (max-width: 640px){
+  .brand img{
+    width:190px !important;
+    max-width:190px !important;
+    max-height:48px !important;
+  }
+}
+
+
+/* FINAL HEADER — compact logo + navigation like the approved reference */
+header.site-header{
+  height:76px !important;
+  min-height:76px !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  background:#fff !important;
+  border-bottom:1px solid #e6e9ee !important;
+  overflow:visible !important;
+}
+header.site-header .container{
+  height:100% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+}
+.brand{
+  display:flex !important;
+  align-items:center !important;
+  width:auto !important;
+  height:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+  flex:0 0 auto !important;
+}
+.brand img{
+  display:block !important;
+  width:215px !important;
+  max-width:215px !important;
+  height:auto !important;
+  max-height:62px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  border-radius:0 !important;
+  margin:0 !important;
+}
+.brand span{display:none !important}
+.navlinks{
+  display:flex !important;
+  align-items:center !important;
+  gap:30px !important;
+  margin-left:auto !important;
+}
+.navlinks a{
+  font-size:14px !important;
+  font-weight:700 !important;
+  color:#14213d !important;
+  text-decoration:none !important;
+  white-space:nowrap !important;
+}
+@media(max-width:900px){
+  header.site-header{height:68px !important;min-height:68px !important}
+  .brand img{width:185px !important;max-width:185px !important;max-height:54px !important}
+  .navlinks{gap:16px !important}
+}
+@media(max-width:680px){
+  header.site-header{height:auto !important;min-height:64px !important;padding:8px 0 !important}
+  header.site-header .container{flex-wrap:wrap !important;gap:8px !important}
+  .brand img{width:175px !important;max-width:175px !important;max-height:48px !important}
+  .navlinks{width:100% !important;justify-content:flex-end !important;gap:14px !important;overflow-x:auto !important}
+  .navlinks a{font-size:12px !important}
+}
+
 </style>
 </head>
 <body>
 <nav><div class="container navin">
-<a class="brand" href="#home"><img src="assets/logo.png" alt="Elite Horizon logo"><span>ELITE HORIZON<small>TRADING & CONSULTING COMPANY</small></span></a>
+<a class="brand" href="#home"><img src="assets/logo.png" alt="Elite Horizon"></a>
 <div class="navlinks"><a href="#about">About</a><a href="#business">Business</a><a href="#products">Products</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div>
 <a class="btn mobile" href="tel:+966540788355">Call</a>
 </div></nav>
 
-<header id="home" class="hero"><div class="container">
+<header class="site-header" id="home" class="hero"><div class="container">
 <div>
 <div class="kicker">QUALITY PRODUCTS · TRUSTED SOLUTIONS</div>
 <h1>Trading solutions built for <span>business.</span></h1>
