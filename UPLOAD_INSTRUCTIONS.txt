@@ -1,18 +1,20 @@
-ELITE HORIZON FULL REPLACEMENT
+ELITE HORIZON - FULL WEBSITE REPLACEMENT
 
-Replace the existing root index.html with this index.html.
+1. Replace the root index.html with this package's index.html.
+2. Replace the root style.css with this package's style.css.
+3. Replace the root script.js with this package's script.js.
+4. KEEP the existing assets folder and its images.
 
-Keep your existing assets folder. It must contain:
+Required asset filenames:
 logo.png
 favicon.png
-hero.jpg
 dry-food.jpg
 packing.jpg
 safety.jpg
 technology.jpg
 frozen.jpg
+hero.jpg
 industries.jpg
 commitment.jpg
 
-The complete site sections are included in this one index.html.
-The hero now has an automatic 5-item product slider with arrows and dots.
+Commit directly to the main branch. GitHub Pages will redeploy automatically.
