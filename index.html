@@ -1,33 +1,318 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Elite Horizon | Trading & Consulting</title>
-<meta name="description" content="Elite Horizon Trading and Consulting Company supplies dry food, frozen items, packing and plastic products, safety equipment, and technology and connectivity solutions across Saudi Arabia.">
-<link rel="icon" href="assets/favicon.png" type="image/png">
-<link rel="stylesheet" href="style.css">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Elite Horizon Trading and Consulting Company","url":"https://elitetrdksa.com/","logo":"https://elitetrdksa.com/assets/favicon.png"}</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elite Horizon | Trading & Consulting Company</title>
+<meta name="description" content="Elite Horizon Trading and Consulting Company — quality products and trusted solutions in Saudi Arabia.">
+<style>
+:root{
+  --navy:#20206a; --blue:#0d5fae; --green:#269447; --gold:#f2ad1b;
+  --teal:#137d73; --ink:#1b2430; --muted:#647080; --white:#fff; --soft:#f5f8fb;
+}
+*{box-sizing:border-box} html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,Arial,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+a{text-decoration:none;color:inherit}.container{width:min(1180px,92%);margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(255,255,255,.94);
+backdrop-filter:blur(16px);border-bottom:1px solid #e9edf3}
+.navin{height:78px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy)}
+.brand img{width:52px;height:52px;object-fit:cover;border-radius:12px}
+.brand span{font-size:16px;line-height:1.1}.brand small{display:block;font-size:10px;color:var(--green);letter-spacing:.8px;margin-top:4px}
+.navlinks{display:flex;gap:26px;font-size:14px;font-weight:700;color:#384255}
+.navlinks a:hover{color:var(--green)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:999px;
+font-weight:800;background:var(--green);color:white;box-shadow:0 10px 24px rgba(38,148,71,.22)}
+.btn.gold{background:var(--gold);color:#16204f}.btn.outline{background:transparent;color:var(--navy);border:1px solid #d9dfeb;box-shadow:none}
+.hero{min-height:760px;padding-top:78px;display:grid;place-items:center;position:relative;overflow:hidden;
+background:linear-gradient(135deg,#10175c 0%,#20206a 46%,#0f5e6b 100%);color:#fff}
+.hero:before{content:"";position:absolute;inset:0;background:
+radial-gradient(circle at 78% 22%,rgba(242,173,27,.22),transparent 28%),
+radial-gradient(circle at 12% 82%,rgba(38,148,71,.25),transparent 30%)}
+.hero .container{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:55px;align-items:center}
+.kicker{display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border:1px solid rgba(255,255,255,.2);
+border-radius:999px;background:rgba(255,255,255,.08);font-size:12px;font-weight:800;letter-spacing:1px}
+h1{font-size:clamp(44px,6vw,78px);line-height:1.02;margin:18px 0}.hero h1 span{color:#6bc86b}
+.hero p{font-size:18px;color:#dbe4f3;max-width:640px}.actions{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.hero-card{border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.1);padding:14px;border-radius:30px;
+box-shadow:0 30px 80px rgba(0,0,0,.25);transform:rotate(2deg)}
+.hero-card img{width:100%;display:block;border-radius:20px}
+.stats{margin-top:32px;display:flex;gap:28px;flex-wrap:wrap}.stat strong{display:block;font-size:28px}.stat span{color:#c8d3e5;font-size:13px}
+section{padding:100px 0}.eyebrow{color:var(--green);font-size:13px;font-weight:900;letter-spacing:2px;text-transform:uppercase}
+.title{font-size:clamp(32px,4vw,52px);line-height:1.1;margin:8px 0 14px;color:var(--navy)}
+.lead{color:var(--muted);max-width:720px}.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-img{border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(21,39,75,.14)}.about-img img{width:100%;display:block}
+.values{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:28px}
+.value{padding:18px;border:1px solid #e7ebf0;border-radius:18px;background:#fff}.value b{display:block;color:var(--navy);margin-bottom:5px}
+.business{background:var(--soft)}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:38px}
+.card{background:#fff;border:1px solid #e6ebf0;border-radius:22px;overflow:hidden;transition:.25s;box-shadow:0 8px 30px rgba(20,30,50,.05)}
+.card:hover{transform:translateY(-7px);box-shadow:0 18px 45px rgba(20,30,50,.12)}
+.card img{width:100%;height:155px;object-fit:cover}.card-body{padding:19px}.card h3{margin:0 0 7px;color:var(--navy);font-size:18px}.card p{margin:0;color:var(--muted);font-size:13px}
+.products{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:40px}.product{position:relative;min-height:390px;border-radius:28px;overflow:hidden;color:white}
+.product img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.58)}.product .overlay{position:absolute;inset:0;padding:30px;display:flex;flex-direction:column;justify-content:end;
+background:linear-gradient(transparent 25%,rgba(7,14,37,.9))}
+.product h3{font-size:30px;margin:0 0 8px}.product p{margin:0;color:#e8edf6}.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:15px}.tag{padding:7px 10px;border-radius:999px;background:rgba(255,255,255,.14);font-size:12px}
+.why{background:#10174c;color:white}.why .title{color:white}.why .lead{color:#cbd5e6}
+.whygrid{display:grid;grid-template-columns:1fr 1fr;gap:45px;align-items:center}.whyimg{border-radius:28px;overflow:hidden}.whyimg img{width:100%;display:block}
+.reason{display:flex;gap:15px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.12)}.reason:last-child{border:0}.icon{width:45px;height:45px;border-radius:50%;
+display:grid;place-items:center;background:linear-gradient(135deg,var(--green),var(--gold));font-weight:900;color:#10174c;flex:none}
+.reason b{font-size:18px}.reason p{margin:2px 0 0;color:#bfc9dc}
+.industries{text-align:center}.industrygrid{display:grid;grid-template-columns:repeat(7,1fr);gap:12px;margin-top:38px}
+.ind{padding:22px 10px;border:1px solid #e6ebf0;border-radius:18px;font-weight:800;color:var(--navy);font-size:13px;background:white}
+.ind span{font-size:28px;display:block;margin-bottom:8px}.industry-img{margin-top:28px;border-radius:28px;overflow:hidden}.industry-img img{width:100%;display:block}
+.commit{display:grid;grid-template-columns:1fr 1fr;gap:55px;align-items:center}.commit img{width:100%;border-radius:28px}.checklist{display:grid;gap:12px;margin-top:25px}
+.check{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid #e9edf2}.check i{width:26px;height:26px;border-radius:50%;background:#e8f6ec;color:var(--green);display:grid;place-items:center;font-style:normal;font-weight:900}
+.contact{background:linear-gradient(135deg,#eef8f1,#f8fbff)}.contactbox{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:stretch}
+.contact-card{background:#fff;border-radius:28px;padding:35px;border:1px solid #e5ebef}.contact-list{display:grid;gap:18px;margin-top:25px}.contact-item b{display:block;color:var(--navy)}.contact-item span{color:var(--muted)}
+footer{background:#10174c;color:#fff;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:20px;align-items:center}.foot small{color:#b9c3d5}
+.mobile{display:none}
+@media(max-width:900px){
+.navlinks{display:none}.mobile{display:block}.hero .container,.about,.whygrid,.commit,.contactbox{grid-template-columns:1fr}.hero{padding:125px 0 80px}.hero-card{max-width:600px;margin:auto}.grid{grid-template-columns:repeat(2,1fr)}.products{grid-template-columns:1fr}.industrygrid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:560px){
+section{padding:75px 0}.grid,.values{grid-template-columns:1fr}.industrygrid{grid-template-columns:1fr 1fr}.hero h1{font-size:48px}.stats{gap:18px}.brand span{font-size:14px}
+}
+
+/* Elite Horizon premium motion */
+@keyframes ehFadeUp{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}
+@keyframes ehFloat{0%,100%{transform:rotate(2deg) translateY(0)}50%{transform:rotate(2deg) translateY(-9px)}}
+.hero .kicker{animation:ehFadeUp .7s ease both}
+.hero h1{animation:ehFadeUp .8s .08s ease both}
+.hero p{animation:ehFadeUp .8s .16s ease both}
+.hero .actions{animation:ehFadeUp .8s .24s ease both}
+.hero .stats{animation:ehFadeUp .8s .32s ease both}
+.hero-card{animation:ehFadeUp .9s .1s ease both,ehFloat 5s 1s ease-in-out infinite}
+.btn{transition:transform .22s ease,box-shadow .22s ease,filter .22s ease}
+.btn:hover{transform:translateY(-3px);filter:saturate(1.08);box-shadow:0 14px 30px rgba(38,148,71,.28)}
+.btn.gold:hover{box-shadow:0 14px 30px rgba(242,173,27,.28)}
+.card,.value,.ind,.contact-card{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+.card:hover,.value:hover,.ind:hover,.contact-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(20,30,50,.12);border-color:#d7e0ea}
+.product{transition:transform .35s ease,box-shadow .35s ease}
+.product:hover{transform:translateY(-7px);box-shadow:0 22px 50px rgba(7,14,37,.18)}
+.product img{transition:transform .55s ease,filter .35s ease}
+.product:hover img{transform:scale(1.045);filter:brightness(.62)}
+.reason{transition:padding-left .25s ease}.reason:hover{padding-left:8px}
+.icon{transition:transform .25s ease}.reason:hover .icon{transform:rotate(6deg) scale(1.06)}
+.brand img{transition:transform .25s ease}.brand:hover img{transform:scale(1.05)}
+.navlinks a{position:relative;transition:color .2s ease}
+.navlinks a:after{content:"";position:absolute;left:0;right:100%;bottom:-7px;height:2px;background:var(--green);transition:right .25s ease}
+.navlinks a:hover:after{right:0}
+.eh-reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+.eh-reveal.eh-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+
+img{max-width:100%;height:auto}
+.hero-card img,.about-img img,.card img{display:block;width:100%;object-fit:cover}
+
+
+/* FINAL LOGO FIX */
+.brand{
+  display:flex !important;
+  align-items:center !important;
+  flex:0 0 auto !important;
+  width:auto !important;
+  max-width:none !important;
+  overflow:visible !important;
+}
+.brand img{
+  display:block !important;
+  width:280px !important;
+  max-width:280px !important;
+  height:auto !important;
+  max-height:64px !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  overflow:visible !important;
+}
+header{
+  overflow:visible !important;
+}
+@media (max-width: 900px){
+  .brand img{
+    width:220px !important;
+    max-width:220px !important;
+    max-height:54px !important;
+  }
+}
+@media (max-width: 640px){
+  .brand img{
+    width:190px !important;
+    max-width:190px !important;
+    max-height:48px !important;
+  }
+}
+
+
+/* FINAL HEADER — compact logo + navigation like the approved reference */
+header.site-header{
+  height:76px !important;
+  min-height:76px !important;
+  padding:0 !important;
+  display:flex !important;
+  align-items:center !important;
+  background:#fff !important;
+  border-bottom:1px solid #e6e9ee !important;
+  overflow:visible !important;
+}
+header.site-header .container{
+  height:100% !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+}
+.brand{
+  display:flex !important;
+  align-items:center !important;
+  width:auto !important;
+  height:100% !important;
+  padding:0 !important;
+  margin:0 !important;
+  flex:0 0 auto !important;
+}
+.brand img{
+  display:block !important;
+  width:215px !important;
+  max-width:215px !important;
+  height:auto !important;
+  max-height:62px !important;
+  object-fit:contain !important;
+  object-position:left center !important;
+  border-radius:0 !important;
+  margin:0 !important;
+}
+.brand span{display:none !important}
+.navlinks{
+  display:flex !important;
+  align-items:center !important;
+  gap:30px !important;
+  margin-left:auto !important;
+}
+.navlinks a{
+  font-size:14px !important;
+  font-weight:700 !important;
+  color:#14213d !important;
+  text-decoration:none !important;
+  white-space:nowrap !important;
+}
+@media(max-width:900px){
+  header.site-header{height:68px !important;min-height:68px !important}
+  .brand img{width:185px !important;max-width:185px !important;max-height:54px !important}
+  .navlinks{gap:16px !important}
+}
+@media(max-width:680px){
+  header.site-header{height:auto !important;min-height:64px !important;padding:8px 0 !important}
+  header.site-header .container{flex-wrap:wrap !important;gap:8px !important}
+  .brand img{width:175px !important;max-width:175px !important;max-height:48px !important}
+  .navlinks{width:100% !important;justify-content:flex-end !important;gap:14px !important;overflow-x:auto !important}
+  .navlinks a{font-size:12px !important}
+}
+
+
+/* FINAL STABILITY FIX */
+section.eh-reveal{
+  min-height:0;
+}
+
+</style>
 </head>
 <body>
-<header class="header"><div class="nav wrap"><a class="brand" href="#home"><img src="assets/logo.png" alt="Elite Horizon"></a><nav><a href="#about">About</a><a href="#business">Business</a><a href="#products">Products</a><a href="#industries">Industries</a><a href="#contact">Contact</a></nav><a class="top-btn" href="#contact">Contact Us</a><button id="menu" class="menu">☰</button></div><div id="mobile" class="mobile"><a href="#about">About</a><a href="#business">Business</a><a href="#products">Products</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div></header>
-<main>
-<section id="home" class="hero"><div class="hero-wrap wrap"><div class="hero-copy reveal"><div class="badge">QUALITY PRODUCTS · TRUSTED SOLUTIONS</div><h1>Trading<br>solutions built<br>for <em>business.</em></h1><div class="line"></div><p>Elite Horizon Trading and Consulting Company supplies high-quality dry food, frozen items, packing &amp; plastic products, safety equipment, and technology &amp; connectivity solutions across Saudi Arabia.</p><div class="actions"><a class="btn green" href="#products">▣ &nbsp;Explore Products</a><a class="btn gold" href="#contact">◯ &nbsp;Request a Quote</a></div><div class="stats"><div><b>5+</b><span>Years of<br>experience</span></div><div><b>5</b><span>Core business<br>areas</span></div><div><b>7</b><span>Industries<br>served</span></div></div></div>
-<div class="hero-visual reveal"><button class="arrow prev" id="prev">‹</button><div class="slides">
-<div class="slide active"><img src="assets/dry-food.jpg" alt="Dry food supply"><div class="shade"></div><div class="slide-label"><i>🌾</i><small>01</small><h2>DRY FOOD<br>SUPPLY</h2></div></div>
-<div class="slide"><img src="assets/packing.jpg" alt="Packing and plastic"><div class="shade"></div><div class="slide-label"><i>📦</i><small>02</small><h2>PACKING &amp;<br>PLASTIC</h2></div></div>
-<div class="slide"><img src="assets/safety.jpg" alt="Safety items"><div class="shade"></div><div class="slide-label"><i>🛡️</i><small>03</small><h2>SAFETY<br>ITEMS</h2></div></div>
-<div class="slide"><img src="assets/technology.jpg" alt="Technology and connectivity"><div class="shade"></div><div class="slide-label"><i>📡</i><small>04</small><h2>TECHNOLOGY &amp;<br>CONNECTIVITY</h2></div></div>
-<div class="slide"><img src="assets/frozen.jpg" alt="Frozen items"><div class="shade"></div><div class="slide-label"><i>❄️</i><small>05</small><h2>FROZEN<br>ITEMS</h2></div></div>
-</div><button class="arrow next" id="next">›</button><div class="dots"><button class="dot active"></button><button class="dot"></button><button class="dot"></button><button class="dot"></button><button class="dot"></button></div></div></div></section>
-<section id="about" class="section"><div class="wrap two"><div class="reveal"><label>ABOUT US</label><h2>Reliable supply.<br>Long-term partnerships.</h2><p>With over 5 years of experience, Elite Horizon is a dynamic, customer-focused company specializing in the supply of dry food, packing &amp; plastic items, safety items, technology &amp; connectivity products and frozen items.</p><p>Our mission is to provide superior quality products and consulting solutions that enhance our customers' success while maintaining high standards of integrity and professionalism.</p><div class="values"><div><b>Integrity &amp; Transparency</b><span>Fair and professional business practices.</span></div><div><b>Quality &amp; Excellence</b><span>Consistent product and service quality.</span></div><div><b>Customer Satisfaction</b><span>Solutions shaped around client needs.</span></div><div><b>Innovation &amp; Growth</b><span>Building better solutions for tomorrow.</span></div></div></div><div class="photo reveal"><img src="assets/hero.jpg" alt="Elite Horizon business"></div></div></section>
-<section id="business" class="section soft"><div class="wrap"><div class="heading reveal"><label>OUR CORE BUSINESS</label><h2>One partner. Multiple supply categories.</h2><p>A comprehensive range of quality products and services tailored to meet customer needs.</p></div><div class="business-grid"><article><img src="assets/dry-food.jpg"><div><small>01</small><h3>Dry Food Supply</h3><p>Rice, flour, pulses, beans, sugar, spices, oils, nuts, dates, canned foods and beverages.</p></div></article><article><img src="assets/packing.jpg"><div><small>02</small><h3>Packing &amp; Plastic</h3><p>Bags, food containers, disposable items, bottles, wraps, foil, paper and hygiene products.</p></div></article><article><img src="assets/safety.jpg"><div><small>03</small><h3>Safety Items</h3><p>Helmets, safety shoes, gloves, protective wear, goggles, masks and reflective wear.</p></div></article><article><img src="assets/technology.jpg"><div><small>04</small><h3>Technology &amp; Connectivity</h3><p>Adapters, converters, USB hubs, computer accessories, network cables, HDMI, LAN adapters and chargers.</p></div></article><article><img src="assets/frozen.jpg"><div><small>05</small><h3>Frozen Items</h3><p>Frozen vegetables, fruits, meat, poultry, seafood and ready-to-cook products.</p></div></article></div></div></section>
-<section id="products" class="section"><div class="wrap"><div class="heading reveal"><label>PRODUCTS</label><h2>Quality products for everyday business needs.</h2></div><div class="product-grid"><article><img src="assets/dry-food.jpg"><div><h3>Dry Food</h3><p>Reliable food supply for restaurants, retail and business customers.</p></div></article><article><img src="assets/frozen.jpg"><div><h3>Frozen Foods</h3><p>Frozen vegetables, fruits, meat, poultry and seafood products.</p></div></article><article><img src="assets/packing.jpg"><div><h3>Packing &amp; Plastic</h3><p>Packaging and disposable solutions for food service and retail.</p></div></article><article><img src="assets/technology.jpg"><div><h3>Technology &amp; Connectivity</h3><p>Connectivity accessories, networking products and technology supplies.</p></div></article></div></div></section>
-<section class="why"><div class="wrap two"><div class="reveal"><label>WHY CHOOSE US</label><h2>A dependable supply partner.</h2><p>We focus on quality, value, timely delivery and long-term customer relationships.</p><div class="reasons"><div><b>01</b><span><strong>Premium Quality</strong>We source and supply quality products.</span></div><div><b>02</b><span><strong>Competitive Pricing</strong>Affordable solutions that add value.</span></div><div><b>03</b><span><strong>Timely Delivery</strong>Reliable delivery for business requirements.</span></div><div><b>04</b><span><strong>Excellent Support</strong>We value long-term relationships.</span></div></div></div><div class="photo reveal"><img src="assets/industries.jpg" alt="Industries served"></div></div></section>
-<section id="industries" class="section"><div class="wrap center"><div class="heading reveal"><label>INDUSTRIES WE SERVE</label><h2>Serving diverse business sectors.</h2></div><div class="industries"><div>🍽️<span>Restaurants &amp; Catering</span></div><div>🏨<span>Hotels &amp; Hospitality</span></div><div>🏭<span>Food Processing</span></div><div>🛒<span>Retail &amp; Supermarkets</span></div><div>🏗️<span>Construction</span></div><div>🚚<span>Logistics &amp; Transportation</span></div><div>🏛️<span>Institutions &amp; Government</span></div></div></div></section>
-<section class="section soft"><div class="wrap two"><div class="reveal"><label>OUR COMMITMENT</label><h2>Built around trust and consistency.</h2><p>Our commitment is to deliver reliable solutions while building strong, transparent and long-term partnerships.</p><ul><li>✓ Delivering quality products consistently</li><li>✓ Fair and transparent business practices</li><li>✓ Customer satisfaction at every step</li><li>✓ Reliable sourcing and supply</li><li>✓ Long-term partnerships</li></ul></div><div class="photo reveal"><img src="assets/commitment.jpg" alt="Our commitment"></div></div></section>
-<section id="contact" class="contact"><div class="wrap contact-grid"><div class="reveal"><label>LET'S WORK TOGETHER</label><h2>Need a reliable<br>supply partner?</h2><p>Tell us what you need and the Elite Horizon team can help with sourcing and supply.</p><div class="actions"><a class="btn green" href="https://wa.me/966540788355" target="_blank">WhatsApp Us</a><a class="btn outline" href="mailto:info@elitetrdksa.com">Email Us</a></div></div><div class="contact-card reveal"><h3>Contact Details</h3><b>📍 Address</b><p>Khalid Ibn Al Waleed Street, Ash Sharafiyah District 2661, Jeddah 23216, Kingdom of Saudi Arabia</p><b>📞 Phone</b><p><a href="tel:+966540788355">+966 54 078 8355</a></p><b>✉️ Email</b><p><a href="mailto:info@elitetrdksa.com">info@elitetrdksa.com</a></p><b>🌐 Website</b><p>elitetrdksa.com</p></div></div></section>
-</main>
-<footer><div class="wrap"><strong>ELITE HORIZON</strong><span>Trading &amp; Consulting Company · Quality Products. Trusted Solutions.</span></div></footer>
-<a class="wa" href="https://wa.me/966540788355" target="_blank">☎</a>
-<script src="script.js"></script>
-</body></html>
+<nav><div class="container navin">
+<a class="brand" href="#home"><img src="assets/logo.png" alt="Elite Horizon"></a>
+<div class="navlinks"><a href="#about">About</a><a href="#business">Business</a><a href="#products">Products</a><a href="#industries">Industries</a><a href="#contact">Contact</a></div>
+<a class="btn mobile" href="tel:+966540788355">Call</a>
+</div></nav>
+
+<header class="site-header hero" id="home"><div class="container">
+<div>
+<div class="kicker">QUALITY PRODUCTS · TRUSTED SOLUTIONS</div>
+<h1>Trading solutions built for <span>business.</span></h1>
+<p>Elite Horizon Trading and Consulting Company supplies high-quality dry food, frozen items, packing & plastic products, safety equipment, and technology & connectivity solutions across Saudi Arabia.</p>
+<div class="actions"><a class="btn" href="#products">Explore Products</a><a class="btn gold" href="#contact">Request a Quote</a></div>
+<div class="stats"><div class="stat"><strong>5+</strong><span>Years of experience</span></div><div class="stat"><strong>5</strong><span>Core business areas</span></div><div class="stat"><strong>7</strong><span>Industries served</span></div></div>
+</div>
+<div class="hero-card"><img src="assets/hero.jpg" alt="Elite Horizon catalogue visual"></div>
+</div></header>
+
+<section id="about" class="eh-reveal"><div class="container about">
+<div><div class="eyebrow">About Us</div><h2 class="title">Reliable supply. Long-term partnerships.</h2>
+<p class="lead">With over 5 years of experience, Elite Horizon is a dynamic, customer-focused company specializing in the supply of dry food, packing & plastic items, safety items, technology & connectivity products and frozen items.</p>
+<p class="lead">Our mission is to provide superior quality products and consulting solutions that enhance our customers' success while maintaining high standards of integrity and professionalism.</p>
+<div class="values">
+<div class="value eh-reveal"><b>Integrity & Transparency</b><span>Fair and professional business practices.</span></div>
+<div class="value eh-reveal"><b>Quality & Excellence</b><span>Consistent product and service quality.</span></div>
+<div class="value eh-reveal"><b>Customer Satisfaction</b><span>Solutions shaped around client needs.</span></div>
+<div class="value eh-reveal"><b>Innovation & Growth</b><span>Building better solutions for tomorrow.</span></div>
+</div></div>
+<div class="about-img"><img src="assets/hero.jpg" alt="Saudi Arabia business environment"></div>
+</div></section>
+
+<section id="business" class="business eh-reveal"><div class="container"><div class="eyebrow">Our Core Business</div><h2 class="title">One partner. Multiple supply categories.</h2><p class="lead">A comprehensive range of high-quality products and services tailored to meet the needs of our customers.</p>
+<div class="grid">
+<div class="card eh-reveal"><img src="assets/dry-food.jpg"><div class="card-body"><h3>Dry Food Supply</h3><p>Rice, flour, pulses, beans, sugar, salt, spices, oils, nuts, dates, canned foods, tea and beverages.</p></div></div>
+<div class="card eh-reveal"><img src="assets/packing.jpg"><div class="card-body"><h3>Packing & Plastic</h3><p>Bags, food containers, disposable items, bottles, storage, wraps, foil, paper and hygiene products.</p></div></div>
+<div class="card eh-reveal"><img src="assets/safety.jpg"><div class="card-body"><h3>Safety Items</h3><p>Helmets, safety shoes, gloves, protective wear, goggles, masks, reflective wear and first aid.</p></div></div>
+<div class="card eh-reveal"><img src="assets/technology.jpg"><div class="card-body"><h3>Technology & Connectivity</h3><p>Adapters, converters, USB hubs, computer accessories, network cables, HDMI, LAN adapters and chargers.</p></div></div>
+<div class="card eh-reveal"><img src="assets/frozen.jpg"><div class="card-body"><h3>Frozen Items</h3><p>Frozen vegetables, fruits, meat & poultry, seafood, ready-to-cook products and other frozen items.</p></div></div>
+</div></div></section>
+
+<section id="products" class="eh-reveal"><div class="container"><div class="eyebrow">Product Categories</div><h2 class="title">Supply categories at a glance.</h2>
+<div class="products">
+<div class="product"><img src="assets/dry-food.jpg"><div class="overlay"><h3>Dry Food</h3><p>Premium products sourced from trusted suppliers to ensure freshness and long shelf life.</p><div class="tags"><span class="tag">Rice</span><span class="tag">Pulses</span><span class="tag">Spices</span><span class="tag">Oils</span><span class="tag">Beverages</span></div></div></div>
+<div class="product"><img src="assets/frozen.jpg"><div class="overlay"><h3>Frozen Foods</h3><p>Carefully preserved products designed to maintain freshness, quality and taste.</p><div class="tags"><span class="tag">Vegetables</span><span class="tag">Fruits</span><span class="tag">Meat</span><span class="tag">Seafood</span></div></div></div>
+<div class="product"><img src="assets/packing.jpg"><div class="overlay"><h3>Packing & Plastic</h3><p>Solutions for food service, retail and industrial use, with customized printing available.</p><div class="tags"><span class="tag">Containers</span><span class="tag">Cups</span><span class="tag">Bags</span><span class="tag">Foil</span></div></div></div>
+<div class="product"><img src="assets/technology.jpg"><div class="overlay"><h3>Technology</h3><p>Networking, connectivity and computer accessories with sourcing and support.</p><div class="tags"><span class="tag">USB</span><span class="tag">HDMI</span><span class="tag">LAN</span><span class="tag">Fiber</span></div></div></div>
+</div></div></section>
+
+<section class="why eh-reveal"><div class="container whygrid"><div><div class="eyebrow">Why Choose Us?</div><h2 class="title">A dependable supply partner.</h2><p class="lead">We focus on quality, value, timely delivery and long-term customer relationships.</p>
+<div class="reason"><div class="icon">01</div><div><b>Premium Quality</b><p>We source and supply only the best.</p></div></div>
+<div class="reason"><div class="icon">02</div><div><b>Competitive Pricing</b><p>Affordable solutions that add value.</p></div></div>
+<div class="reason"><div class="icon">03</div><div><b>Timely Delivery</b><p>On-time delivery, every time.</p></div></div>
+<div class="reason"><div class="icon">04</div><div><b>Experienced Team</b><p>Professional team with industry expertise.</p></div></div>
+<div class="reason"><div class="icon">05</div><div><b>Excellent Support</b><p>We value long-term relationships.</p></div></div>
+</div><div class="whyimg"><img src="assets/industries.jpg" alt="Business partnership"></div></div></section>
+
+<section id="industries" class="industries eh-reveal"><div class="container"><div class="eyebrow">Industries We Serve</div><h2 class="title">Serving diverse business sectors.</h2><p class="lead" style="margin:auto">We proudly supply our products and services to a wide range of industries.</p>
+<div class="industrygrid">
+<div class="ind eh-reveal"><span>🍽️</span>Restaurants & Catering</div><div class="ind eh-reveal"><span>🏨</span>Hotels & Hospitality</div><div class="ind eh-reveal"><span>🏭</span>Food Processing</div><div class="ind eh-reveal"><span>🛒</span>Retail & Supermarkets</div><div class="ind eh-reveal"><span>🏗️</span>Construction</div><div class="ind eh-reveal"><span>🚚</span>Logistics & Transportation</div><div class="ind eh-reveal"><span>🏛️</span>Institutions & Government</div>
+</div><div class="industry-img"><img src="assets/industries.jpg" alt="Industries served"></div></div></section>
+
+<section class="eh-reveal"><div class="container commit"><div><div class="eyebrow">Our Commitment</div><h2 class="title">Built around trust and consistency.</h2><p class="lead">Our commitment is to deliver reliable solutions while building strong, transparent and long-term partnerships.</p>
+<div class="checklist"><div class="check"><i>✓</i><b>Delivering quality products consistently</b></div><div class="check"><i>✓</i><b>Maintaining fair and transparent business practices</b></div><div class="check"><i>✓</i><b>Ensuring customer satisfaction at every step</b></div><div class="check"><i>✓</i><b>Supporting clients with reliable solutions</b></div><div class="check"><i>✓</i><b>Building long-term partnerships</b></div><div class="check"><i>✓</i><b>Contributing to a safer and better tomorrow</b></div></div></div><img src="assets/commitment.jpg" alt="Elite Horizon commitment"></div></section>
+
+<section id="contact" class="contact eh-reveal"><div class="container"><div class="contactbox">
+<div><div class="eyebrow">Let's Work Together</div><h2 class="title">Need a reliable supply partner?</h2><p class="lead">Tell us what you need and the Elite Horizon team can help with sourcing and supply.</p><div class="actions"><a class="btn" href="https://wa.me/966540788355">WhatsApp Us</a><a class="btn outline" href="mailto:info@elitetrdksa.com">Email Us</a></div></div>
+<div class="contact-card"><h3 style="color:var(--navy);margin-top:0">Contact Details</h3><div class="contact-list">
+<div class="contact-item"><b>📍 Address</b><span>Khalid Ibn Al Waleed Street, Ash Sharafiyah District 2661, Jeddah 23216, Kingdom of Saudi Arabia</span></div>
+<div class="contact-item"><b>📞 Phone</b><span>+966 54 078 8355</span></div>
+<div class="contact-item"><b>✉️ Email</b><span>info@elitetrdksa.com</span></div>
+<div class="contact-item"><b>🌐 Website</b><span>elitetrdksa.com</span></div>
+</div></div>
+</div></div></section>
+
+<footer><div class="container foot"><div><strong>ELITE HORIZON</strong><small style="display:block">Trading & Consulting Company</small></div><small>Quality Products. Trusted Solutions.</small></div></footer>
+
+<script>
+(() => {
+  const items = document.querySelectorAll('.eh-reveal');
+  if (!('IntersectionObserver' in window)) {
+    items.forEach(el => el.classList.add('eh-visible'));
+    return;
+  }
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('eh-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
+  items.forEach((el,i) => {
+    el.style.transitionDelay = Math.min((i % 5) * 70, 280) + 'ms';
+    observer.observe(el);
+  });
+})();
+</script>
+
+</body>
+</html>
