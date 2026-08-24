@@ -58,3 +58,383 @@
     transition: none !important;
   }
 }
+
+/* ===== MOBILE FINAL FIX ===== */
+@media (max-width: 760px) {
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 68px;
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  .brand {
+    min-width: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .brand img {
+    width: 185px;
+    max-width: 70vw;
+    height: auto;
+  }
+
+  .menu-btn {
+    display: flex;
+    margin-left: auto;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    color: #172f73;
+    cursor: pointer;
+  }
+
+  .nav {
+    position: absolute;
+    display: none;
+    top: 68px;
+    left: 0;
+    right: 0;
+    width: 100%;
+    margin: 0;
+    padding: 18px 22px 22px;
+    background: #fff;
+    box-shadow: 0 12px 25px rgba(20,45,100,.12);
+    border-top: 1px solid #edf0f4;
+    flex-direction: column;
+    gap: 0;
+    z-index: 100;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    display: block;
+    padding: 14px 4px;
+    font-size: 16px;
+    border-bottom: 1px solid #edf0f4;
+  }
+
+  .hero {
+    width: 100%;
+    min-height: auto;
+    padding: 48px 20px 55px;
+    display: flex;
+    flex-direction: column;
+    gap: 38px;
+  }
+
+  .hero-content {
+    width: 100%;
+  }
+
+  .eyebrow {
+    font-size: 9px;
+    letter-spacing: 1.1px;
+    padding: 8px 12px;
+    margin-bottom: 17px;
+  }
+
+  .hero h1 {
+    font-size: clamp(42px, 12.5vw, 58px);
+    line-height: .98;
+    letter-spacing: -2px;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    width: 100%;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-actions {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 25px 0 30px;
+  }
+
+  .btn {
+    width: 100%;
+    min-height: 50px;
+    padding: 13px 10px;
+    font-size: 13px;
+  }
+
+  .stats {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .stats strong {
+    font-size: 24px;
+  }
+
+  .stats small {
+    display: block;
+    font-size: 10px;
+    line-height: 1.35;
+    margin-top: 5px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .hero-frame {
+    width: 100%;
+    border-radius: 20px;
+  }
+
+  .hero-frame img {
+    width: 100%;
+    height: 285px;
+    object-fit: cover;
+  }
+
+  .hero-caption {
+    left: 12px;
+    bottom: 12px;
+    padding: 10px 12px;
+  }
+
+  .hero-caption small {
+    font-size: 9px;
+  }
+
+  .hero-caption strong {
+    font-size: 13px;
+  }
+
+  .slider-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 25px;
+  }
+
+  .section {
+    width: 100%;
+    max-width: 100%;
+    padding: 65px 20px;
+  }
+
+  .section h2 {
+    font-size: clamp(32px, 9.5vw, 44px);
+    line-height: 1.05;
+    letter-spacing: -1px;
+  }
+
+  .section p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .two-col {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .about-image img,
+  .industry-image img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    border-radius: 18px;
+  }
+
+  .value-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .value-grid article {
+    padding: 20px;
+  }
+
+  .business {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .business > .section-kicker,
+  .business > h2,
+  .business > .section-intro {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .business-grid {
+    width: auto;
+    margin: 0 20px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .business-card {
+    width: 100%;
+  }
+
+  .business-card img {
+    width: 100%;
+    height: 230px;
+  }
+
+  .business-card div {
+    padding: 20px;
+  }
+
+  .business-card h3 {
+    font-size: 21px;
+  }
+
+  .products .product-list {
+    width: 100%;
+  }
+
+  .product-row,
+  .product-row.reverse {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    direction: ltr;
+    min-height: 0;
+    border-radius: 18px;
+  }
+
+  .product-row img {
+    width: 100%;
+    height: 240px;
+    min-height: 0;
+    object-fit: cover;
+  }
+
+  .product-row div {
+    padding: 26px 22px 30px;
+  }
+
+  .product-row h3 {
+    font-size: 27px;
+  }
+
+  .industry-tags {
+    gap: 8px;
+  }
+
+  .industry-tags span {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+
+  .why {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .why > .section-kicker,
+  .why > h2,
+  .why-grid {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .quote-section {
+    width: 100%;
+    padding: 65px 20px;
+  }
+
+  .quote-inner {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .quote-section h2 {
+    font-size: 36px;
+    line-height: 1.05;
+  }
+
+  .quote-section form {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .contact-grid > div {
+    padding: 22px;
+  }
+
+  footer {
+    width: 100%;
+    padding: 28px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  footer img {
+    width: 190px;
+  }
+
+  /* Mobile reveal animation: vertical only, preventing sideways overflow. */
+  .reveal-section,
+  .reveal-item {
+    transform: translateY(28px);
+  }
+
+  .about .two-col > div:first-child,
+  .about .two-col > div:last-child,
+  .industries .two-col > div:first-child,
+  .industries .two-col > div:last-child,
+  .quote-inner > div:first-child,
+  .quote-inner form {
+    transform: translateY(28px);
+  }
+
+  .reveal-section.is-visible .two-col > div,
+  .reveal-section.is-visible .quote-inner > div,
+  .reveal-section.is-visible .quote-inner form {
+    transform: translateY(0);
+  }
+}
