@@ -43,3 +43,16 @@ document.getElementById("quoteForm").addEventListener("submit",e=>{
   const text=`Hello Elite Horizon,\n\nName: ${f.get("name")}\nCompany: ${f.get("company")}\nPhone: ${f.get("phone")}\nEmail: ${f.get("email")}\nCategory: ${f.get("category")}\nRequirement: ${f.get("message")}`;
   window.open("https://wa.me/966540783355?text="+encodeURIComponent(text),"_blank");
 });
+
+// Scroll reveal: sections and content slide into view as the visitor scrolls.
+const revealElements = document.querySelectorAll(".reveal-section, .reveal-item");
+const revealObserver = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.14, rootMargin: "0px 0px -45px 0px" });
+
+revealElements.forEach(el => revealObserver.observe(el));
