@@ -1,51 +1,21 @@
+const header=document.getElementById("header"),nav=document.getElementById("nav"),menu=document.getElementById("menu");
+window.addEventListener("scroll",()=>header.classList.toggle("compact",scrollY>30),{passive:true});
+if(menu)menu.onclick=()=>nav.classList.toggle("open");
+if(nav)nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
+
 const slides=[
-  ["assets/dry-food.jpg","DRY FOOD SUPPLY"],
-  ["assets/packing.jpg","PACKING & PLASTIC"],
-  ["assets/safety.jpg","SAFETY ITEMS"],
-  ["assets/technology.jpg","TECHNOLOGY & CONNECTIVITY"],
-  ["assets/frozen.jpg","FROZEN ITEMS"]
-];
-let current=0;
-const heroImage=document.getElementById("heroImage");
-const heroLabel=document.getElementById("heroLabel");
-const dots=document.getElementById("dots");
-function renderDots(){
-  slides.forEach((_,i)=>{
-    const b=document.createElement("button");
-    b.setAttribute("aria-label","Show slide "+(i+1));
-    b.onclick=()=>showSlide(i);
-    dots.appendChild(b);
-  });
-}
-function showSlide(i){
-  current=(i+slides.length)%slides.length;
-  heroImage.style.opacity="0";
-  setTimeout(()=>{
-    heroImage.src=slides[current][0];
-    heroLabel.textContent=slides[current][1];
-    heroImage.style.opacity="1";
-  },160);
-  [...dots.children].forEach((b,j)=>b.classList.toggle("active",j===current));
-}
-renderDots(); showSlide(0);
-document.getElementById("prev").onclick=()=>showSlide(current-1);
-document.getElementById("next").onclick=()=>showSlide(current+1);
-setInterval(()=>showSlide(current+1),5000);
+["assets/dry-food.jpg","Dry Food Supply"],
+["assets/packing.jpg","Packing & Plastic"],
+["assets/safety.jpg","Safety Items"],
+["assets/technology.jpg","Technology & Connectivity"],
+["assets/frozen.jpg","Frozen Items"]];
+let current=0,timer;
+const heroImage=document.getElementById("heroImage"),heroName=document.getElementById("heroName"),heroCount=document.getElementById("heroCount"),heroProgress=document.getElementById("heroProgress");
+function showSlide(i){current=(i+slides.length)%slides.length;heroImage.style.opacity=0;setTimeout(()=>{heroImage.src=slides[current][0];heroName.textContent=slides[current][1];heroCount.textContent=`0${current+1} / 05`;heroProgress.style.width=`${(current+1)*20}%`;heroImage.style.opacity=1},150)}
+function restart(){clearInterval(timer);timer=setInterval(()=>showSlide(current+1),5500)}
+document.getElementById("prev").onclick=()=>{showSlide(current-1);restart()};document.getElementById("next").onclick=()=>{showSlide(current+1);restart()};showSlide(0);restart();
 
-const menuBtn=document.getElementById("menuBtn");
-const nav=document.getElementById("nav");
-menuBtn.onclick=()=>nav.classList.toggle("open");
-nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
+const observer=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");observer.unobserve(e.target)}}),{threshold:.12,rootMargin:"0px 0px -40px"});
+document.querySelectorAll(".reveal").forEach(e=>observer.observe(e));
 
-document.getElementById("quoteForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  const f=new FormData(e.target);
-  const text=`Hello Elite Horizon,\n\nName: ${f.get("name")}\nCompany: ${f.get("company")}\nPhone: ${f.get("phone")}\nEmail: ${f.get("email")}\nCategory: ${f.get("category")}\nRequirement: ${f.get("message")}`;
-  window.open("https://wa.me/966540783355?text="+encodeURIComponent(text),"_blank");
-});
-
-/* Premium scroll reveal */
-const premiumObserver=new IntersectionObserver(entries=>entries.forEach(e=>{
- if(e.isIntersecting){e.target.classList.add("visible");premiumObserver.unobserve(e.target)}
-}),{threshold:.12,rootMargin:"0px 0px -45px 0px"});
-document.querySelectorAll(".reveal").forEach(el=>premiumObserver.observe(el));
+document.getElementById("quoteForm").addEventListener("submit",e=>{e.preventDefault();const f=new FormData(e.target);const msg=`Hello Elite Horizon,\n\nName: ${f.get("name")}\nCompany: ${f.get("company")}\nPhone: ${f.get("phone")}\nCategory: ${f.get("category")}\nRequirement: ${f.get("message")}`;window.open("https://wa.me/966540783355?text="+encodeURIComponent(msg),"_blank")});

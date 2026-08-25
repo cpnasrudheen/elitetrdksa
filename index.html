@@ -1,166 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Elite Horizon | Trading & Consulting Company</title>
-<meta name="description" content="Elite Horizon Trading and Consulting Company — quality products, trusted supply and reliable business solutions across Saudi Arabia.">
-<meta name="theme-color" content="#172f73">
+<meta name="description" content="Elite Horizon Trading and Consulting Company — dependable products and supply solutions for businesses in Saudi Arabia.">
 <link rel="icon" href="assets/favicon.png" type="image/png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="site-header">
-  <a class="brand" href="#home">
-    <img src="assets/logo.png" alt="Elite Horizon Trading and Consulting Company">
-  </a>
-  <nav class="nav" id="nav">
-    <a href="#about">About</a>
-    <a href="#business">Business</a>
-    <a href="#products">Products</a>
-    <a href="#industries">Industries</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="header-cta" href="#quote">Request a Quote</a>
-  <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+
+<header class="header" id="header">
+  <div class="nav-wrap">
+    <a class="brand" href="#home"><img src="assets/logo.png" alt="Elite Horizon"></a>
+    <nav id="nav">
+      <a href="#about">About</a>
+      <a href="#business">Business Areas</a>
+      <a href="#products">Products</a>
+      <a href="#industries">Industries</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="quote-btn" href="#quote">Request a Quote <span>↗</span></a>
+    <button class="menu" id="menu" aria-label="Menu"><i></i><i></i><i></i></button>
+  </div>
 </header>
 
 <main>
 <section class="hero" id="home">
-  <div class="hero-content">
-    <span class="eyebrow">QUALITY PRODUCTS · TRUSTED SOLUTIONS</span>
-    <h1>Trading solutions<br>built for <span>business.</span></h1>
-    <p>Elite Horizon Trading and Consulting Company supplies quality dry food, packing & plastic products, safety items, technology & connectivity solutions, and frozen products across Saudi Arabia.</p>
-    <div class="hero-actions">
-      <a class="btn btn-green" href="#products">Explore Products</a>
-      <a class="btn btn-gold" href="#quote">Request a Quote</a>
-    </div>
-    <div class="stats">
-      <div><strong>5+</strong><small>Years of experience</small></div>
-      <div><strong>5</strong><small>Core business areas</small></div>
-      <div><strong>7</strong><small>Industries served</small></div>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="hero-frame">
-      <img id="heroImage" src="assets/dry-food.jpg" alt="Elite Horizon product supply">
-      <div class="hero-caption">
-        <small id="heroLabel">DRY FOOD SUPPLY</small>
-        <strong>Quality supply for business.</strong>
+  <div class="hero-grid">
+    <div class="hero-copy reveal">
+      <div class="overline">ELITE HORIZON · TRADING & CONSULTING</div>
+      <h1>Reliable supply.<br><em>Business ready.</em></h1>
+      <p>We connect businesses with quality products, practical sourcing and dependable service across Saudi Arabia.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#business">Explore Our Business</a>
+        <a class="btn secondary" href="#quote">Request a Quote <span>↗</span></a>
       </div>
-      <button class="slider-btn prev" id="prev" aria-label="Previous image">‹</button>
-      <button class="slider-btn next" id="next" aria-label="Next image">›</button>
+      <div class="hero-meta">
+        <span><b>05</b> Business areas</span><i></i>
+        <span><b>07</b> Industries</span><i></i>
+        <span><b>01</b> Trusted partner</span>
+      </div>
     </div>
-    <div class="dots" id="dots"></div>
+    <div class="hero-media reveal delay-2">
+      <div class="hero-image"><img id="heroImage" src="assets/dry-food.jpg" alt="Elite Horizon products"></div>
+      <div class="hero-label"><span id="heroCount">01 / 05</span><b id="heroName">Dry Food Supply</b></div>
+      <button class="hero-arrow left" id="prev">←</button>
+      <button class="hero-arrow right" id="next">→</button>
+      <div class="hero-line"><span id="heroProgress"></span></div>
+    </div>
   </div>
 </section>
 
-<section class="section about" id="about" class="reveal">
-  <div class="section-kicker">ABOUT US</div>
-  <div class="two-col">
-    <div>
-      <h2>Reliable supply.<br><span>Long-term partnerships.</span></h2>
-      <p>Elite Horizon is a dynamic, customer-focused trading and consulting company committed to supplying dependable products and practical business solutions.</p>
-      <p>Our approach is built around quality, transparent communication, competitive pricing and timely delivery. We aim to become a trusted long-term supply partner for businesses across Saudi Arabia.</p>
-    </div>
-    <div class="about-image"><img src="assets/commitment.jpg" alt="Elite Horizon supply portfolio"></div>
+<section class="about section" id="about">
+  <div class="section-intro reveal">
+    <span class="number">01</span><div><small>ABOUT ELITE HORIZON</small><h2>A dependable partner for<br><strong>everyday business.</strong></h2></div>
   </div>
-  <div class="value-grid">
-    <article><b>Integrity & Transparency</b><p>Fair, professional and dependable business practices.</p></article>
-    <article><b>Quality & Excellence</b><p>Consistent product and service quality.</p></article>
-    <article><b>Customer Satisfaction</b><p>Solutions shaped around customer requirements.</p></article>
-    <article><b>Innovation & Growth</b><p>Building better supply solutions for changing needs.</p></article>
+  <div class="about-grid">
+    <div class="about-copy reveal">
+      <p class="lead">Elite Horizon Trading and Consulting Company is built around a simple idea: make business supply dependable.</p>
+      <p>We bring together a focused range of products across food, packaging, safety, technology and frozen categories, supported by responsive communication and practical service.</p>
+      <div class="about-facts"><div><b>Quality</b><span>Consistent product focus</span></div><div><b>Service</b><span>Responsive communication</span></div><div><b>Partnership</b><span>Built for long-term business</span></div></div>
+    </div>
+    <div class="about-media reveal delay-2"><img src="assets/commitment.jpg" alt="Elite Horizon commitment"><div class="image-note"><b>Built for business.</b><span>Quality · Service · Partnership</span></div></div>
   </div>
 </section>
 
-<section class="section business" id="business" class="reveal">
-  <div class="section-kicker">OUR CORE BUSINESS</div>
-  <h2>One partner. Multiple supply categories.</h2>
-  <p class="section-intro">A comprehensive range of quality products and services selected to meet customer needs.</p>
+<section class="business section" id="business">
+  <div class="section-intro reveal">
+    <span class="number">02</span><div><small>BUSINESS AREAS</small><h2>Focused categories.<br><strong>Clear solutions.</strong></h2></div>
+  </div>
   <div class="business-grid">
-    <article class="business-card"><img src="assets/dry-food.jpg" alt="Dry Food Supply"><div><span>01</span><h3>Dry Food Supply</h3><p>Rice, flour, pulses, beans, sugar, spices, oils, nuts, dates and more.</p></div></article>
-    <article class="business-card"><img src="assets/packing.jpg" alt="Packing and Plastic"><div><span>02</span><h3>Packing & Plastic</h3><p>Containers, cups, bags, bottles, wraps, trays and packaging essentials.</p></div></article>
-    <article class="business-card"><img src="assets/safety.jpg" alt="Safety Items"><div><span>03</span><h3>Safety Items</h3><p>Helmets, safety shoes, gloves, goggles, protective wear and workplace essentials.</p></div></article>
-    <article class="business-card"><img src="assets/technology.jpg" alt="Technology and Connectivity"><div><span>04</span><h3>Technology & Connectivity</h3><p>Adapters, cables, networking, accessories, chargers and connectivity products.</p></div></article>
-    <article class="business-card"><img src="assets/frozen.jpg" alt="Frozen Items"><div><span>05</span><h3>Frozen Items</h3><p>Frozen vegetables, fruits, seafood, meat, poultry and ready-to-cook products.</p></div></article>
+    <article class="business-card feature reveal"><img src="assets/dry-food.jpg" alt="Dry Food Supply"><div><span>01</span><h3>Dry Food Supply</h3><p>Essential food products for hospitality, retail and business requirements.</p><a href="#quote">Enquire <b>↗</b></a></div></article>
+    <article class="business-card reveal delay-1"><img src="assets/packing.jpg" alt="Packing and Plastic"><div><span>02</span><h3>Packing & Plastic</h3><p>Practical packaging solutions for commercial use.</p><a href="#quote">Enquire <b>↗</b></a></div></article>
+    <article class="business-card reveal delay-2"><img src="assets/safety.jpg" alt="Safety Items"><div><span>03</span><h3>Safety Items</h3><p>Professional PPE and workplace protection.</p><a href="#quote">Enquire <b>↗</b></a></div></article>
+    <article class="business-card reveal delay-3"><img src="assets/technology.jpg" alt="Technology and Connectivity"><div><span>04</span><h3>Technology & Connectivity</h3><p>Connectivity products for modern operations.</p><a href="#quote">Enquire <b>↗</b></a></div></article>
+    <article class="business-card reveal delay-4"><img src="assets/frozen.jpg" alt="Frozen Items"><div><span>05</span><h3>Frozen Items</h3><p>Frozen food products for hospitality and retail.</p><a href="#quote">Enquire <b>↗</b></a></div></article>
   </div>
 </section>
 
-<section class="section products" id="products" class="reveal">
-  <div class="section-kicker">PRODUCT CATEGORIES</div>
+<section class="statement">
+  <div class="statement-inner reveal">
+    <span>OUR APPROACH</span>
+    <h2>Quality products.<br><em>Clear communication.</em><br>Reliable service.</h2>
+    <a href="#quote">Start a conversation ↗</a>
+  </div>
+</section>
+
+<section class="products section" id="products">
+  <div class="section-intro reveal">
+    <span class="number">03</span><div><small>PRODUCT CATEGORIES</small><h2>What we can<br><strong>source for you.</strong></h2></div>
+  </div>
   <div class="product-list">
-    <article class="product-row"><img src="assets/dry-food.jpg"><div><h3>Dry Food Supply</h3><p>Reliable supply of essential food staples for catering, retail and business requirements.</p><a href="#quote">Enquire Now →</a></div></article>
-    <article class="product-row reverse"><img src="assets/packing.jpg"><div><h3>Packing & Plastic</h3><p>Practical packaging products for food service, retail and commercial use.</p><a href="#quote">Enquire Now →</a></div></article>
-    <article class="product-row"><img src="assets/safety.jpg"><div><h3>Safety Items</h3><p>Professional PPE and workplace safety products for a range of industries.</p><a href="#quote">Enquire Now →</a></div></article>
-    <article class="product-row reverse"><img src="assets/technology.jpg"><div><h3>Technology & Connectivity</h3><p>Connectivity and technology accessories to support modern business operations.</p><a href="#quote">Enquire Now →</a></div></article>
-    <article class="product-row"><img src="assets/frozen.jpg"><div><h3>Frozen Items</h3><p>Quality frozen food products for hospitality, food service and retail needs.</p><a href="#quote">Enquire Now →</a></div></article>
+    <article class="product-row reveal"><div class="product-img"><img src="assets/dry-food.jpg" alt="Dry Food Supply"></div><div class="product-copy"><span>01</span><h3>Dry Food Supply</h3><p>Rice, flour, pulses, beans, sugar, spices, oils, nuts, dates and other essential food products.</p><a href="#quote">Request this category ↗</a></div></article>
+    <article class="product-row reverse reveal"><div class="product-img"><img src="assets/packing.jpg" alt="Packing and Plastic"></div><div class="product-copy"><span>02</span><h3>Packing & Plastic</h3><p>Containers, cups, bags, bottles, wraps, trays and packaging essentials.</p><a href="#quote">Request this category ↗</a></div></article>
+    <article class="product-row reveal"><div class="product-img"><img src="assets/safety.jpg" alt="Safety Items"></div><div class="product-copy"><span>03</span><h3>Safety Items</h3><p>Helmets, safety shoes, gloves, goggles, protective wear and workplace essentials.</p><a href="#quote">Request this category ↗</a></div></article>
+    <article class="product-row reverse reveal"><div class="product-img"><img src="assets/technology.jpg" alt="Technology and Connectivity"></div><div class="product-copy"><span>04</span><h3>Technology & Connectivity</h3><p>Adapters, cables, networking accessories, chargers and connectivity products.</p><a href="#quote">Request this category ↗</a></div></article>
+    <article class="product-row reveal"><div class="product-img"><img src="assets/frozen.jpg" alt="Frozen Items"></div><div class="product-copy"><span>05</span><h3>Frozen Items</h3><p>Frozen vegetables, fruits, seafood, meat, poultry and ready-to-cook products.</p><a href="#quote">Request this category ↗</a></div></article>
   </div>
 </section>
 
-<section class="section industries" id="industries" class="reveal">
-  <div class="two-col">
-    <div>
-      <div class="section-kicker">INDUSTRIES WE SERVE</div>
-      <h2>Supply solutions for growing businesses.</h2>
-      <p>We support customers across a range of sectors with dependable products and responsive service.</p>
-      <div class="industry-tags">
-        <span>Hotels & Hospitality</span><span>Restaurants & Catering</span><span>Food Processing</span>
-        <span>Retail & Supermarkets</span><span>Construction</span><span>Institutions</span><span>Logistics</span>
-      </div>
-    </div>
-    <div class="industry-image"><img src="assets/industries.jpg" alt="Industries served by Elite Horizon"></div>
+<section class="industries section" id="industries">
+  <div class="industry-grid">
+    <div class="reveal"><span class="number">04</span><small>INDUSTRIES WE SERVE</small><h2>Supply that fits<br><strong>real operations.</strong></h2><p>Our product categories are designed to support a broad range of commercial and institutional requirements.</p><div class="tags"><span>Hotels & Hospitality</span><span>Restaurants & Catering</span><span>Food Processing</span><span>Retail & Supermarkets</span><span>Construction</span><span>Logistics</span><span>Institutions</span></div></div>
+    <div class="industry-image reveal delay-2"><img src="assets/industries.jpg" alt="Industries served"><div><b>One partner.</b><span>Multiple supply needs.</span></div></div>
   </div>
 </section>
 
-<section class="section why">
-  <div class="section-kicker">WHY ELITE HORIZON</div>
-  <h2>Quality products. Trusted service.</h2>
+<section class="why section">
+  <div class="section-intro reveal"><span class="number">05</span><div><small>WHY ELITE HORIZON</small><h2>Business value,<br><strong>without the noise.</strong></h2></div></div>
   <div class="why-grid">
-    <article><span>01</span><h3>Premium Quality</h3><p>Products selected with quality and reliability in mind.</p></article>
-    <article><span>02</span><h3>Competitive Pricing</h3><p>Practical pricing designed for business value.</p></article>
-    <article><span>03</span><h3>Timely Delivery</h3><p>Responsive coordination for dependable supply.</p></article>
-    <article><span>04</span><h3>Customer Support</h3><p>Clear communication from enquiry to delivery.</p></article>
+    <article class="reveal"><span>01</span><h3>Quality Focus</h3><p>Products selected with consistency and reliability in mind.</p></article>
+    <article class="reveal delay-1"><span>02</span><h3>Competitive Value</h3><p>Practical pricing designed around business requirements.</p></article>
+    <article class="reveal delay-2"><span>03</span><h3>Responsive Service</h3><p>Clear communication from enquiry through delivery.</p></article>
+    <article class="reveal delay-3"><span>04</span><h3>Long-term Partnership</h3><p>We focus on relationships that grow with your business.</p></article>
   </div>
 </section>
 
-<section class="quote-section" id="quote">
-  <div class="quote-inner">
-    <div>
-      <div class="section-kicker light">REQUEST A QUOTE</div>
-      <h2>Tell us what your business needs.</h2>
-      <p>Send your requirement and our team can get back to you with the next steps.</p>
-    </div>
-    <form id="quoteForm">
-      <div class="form-grid">
-        <input name="name" placeholder="Your name" required>
-        <input name="company" placeholder="Company name">
-        <input name="phone" placeholder="Phone / WhatsApp" required>
-        <input name="email" type="email" placeholder="Email">
-      </div>
-      <select name="category">
-        <option>Dry Food Supply</option><option>Packing & Plastic</option><option>Safety Items</option><option>Technology & Connectivity</option><option>Frozen Items</option>
-      </select>
-      <textarea name="message" rows="5" placeholder="Tell us your requirement"></textarea>
-      <button class="btn btn-gold" type="submit">Send Request</button>
+<section class="quote" id="quote">
+  <div class="quote-grid">
+    <div class="quote-copy reveal"><span>06 — REQUEST A QUOTE</span><h2>Tell us what<br>your business<br><strong>needs.</strong></h2><p>Send your requirement. Our team will get back to you with the next steps.</p><b class="phone">+966 54 078 8355</b></div>
+    <form class="quote-form reveal delay-2" id="quoteForm">
+      <div class="field"><label>Name</label><input name="name" placeholder="Your name" required></div>
+      <div class="two"><div class="field"><label>Company</label><input name="company" placeholder="Company"></div><div class="field"><label>Phone / WhatsApp</label><input name="phone" placeholder="+966..." required></div></div>
+      <div class="field"><label>Product category</label><select name="category"><option>Dry Food Supply</option><option>Packing & Plastic</option><option>Safety Items</option><option>Technology & Connectivity</option><option>Frozen Items</option></select></div>
+      <div class="field"><label>Requirement</label><textarea name="message" rows="4" placeholder="Tell us what you need"></textarea></div>
+      <button type="submit">Send Request <span>↗</span></button>
     </form>
   </div>
 </section>
 
-<section class="section contact" id="contact">
-  <div class="section-kicker">CONTACT</div>
-  <h2>Let’s build a reliable supply partnership.</h2>
+<section class="contact section" id="contact">
+  <div class="section-intro reveal"><span class="number">07</span><div><small>CONTACT</small><h2>Let’s build a<br><strong>reliable partnership.</strong></h2></div></div>
   <div class="contact-grid">
-    <div><small>PHONE</small><a href="tel:+966540783355">+966 54 078 8355</a></div>
-    <div><small>EMAIL</small><a href="mailto:info@elitetrdksa.com">info@elitetrdksa.com</a></div>
-    <div><small>LOCATION</small><p>Jeddah, Kingdom of Saudi Arabia</p></div>
+    <a class="contact-card reveal" href="tel:+966540783355"><small>PHONE</small><b>+966 54 078 8355</b><span>Call our team ↗</span></a>
+    <a class="contact-card reveal delay-1" href="mailto:info@elitetrdksa.com"><small>EMAIL</small><b>info@elitetrdksa.com</b><span>Send an enquiry ↗</span></a>
+    <div class="contact-card reveal delay-2"><small>LOCATION</small><b>Jeddah, Saudi Arabia</b><span>Kingdom of Saudi Arabia</span></div>
   </div>
 </section>
 </main>
 
-<footer>
-  <div><img src="assets/logo.png" alt="Elite Horizon"></div>
-  <p>© 2026 Elite Horizon Trading and Consulting Company. All rights reserved.</p>
-</footer>
+<footer><div><img src="assets/logo.png" alt="Elite Horizon"><p>Trading & Consulting Company</p></div><a href="#home">Back to top ↑</a><small>© 2026 Elite Horizon Trading and Consulting Company. All rights reserved.</small></footer>
+<a class="whatsapp" href="https://wa.me/966540783355" aria-label="WhatsApp">◔</a>
 <script src="script.js"></script>
 </body>
 </html>
