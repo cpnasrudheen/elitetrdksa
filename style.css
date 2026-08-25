@@ -1,5 +1,5 @@
 /* ==========================================
-   ELITE HORIZON - FINAL POLISHED STYLESHEET
+   ELITE HORIZON - COMPLETE CUSTOM STYLESHEET
    ========================================== */
 
 :root {
@@ -47,7 +47,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 18px 6%;
-    background: rgba(255, 255, 255, 0.9);
+    background: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
@@ -104,7 +104,7 @@ body {
     color: var(--primary);
 }
 
-/* --- GENERAL SECTION STYLING --- */
+/* --- GENERAL SECTIONS --- */
 .section {
     padding: 120px 6% 100px 6%;
 }
@@ -130,7 +130,7 @@ h2 span {
     color: var(--accent);
 }
 
-/* --- ULTRA-MODERN BANNER (HERO SECTION) --- */
+/* --- BANNER (HERO SECTION) --- */
 .hero {
     display: flex;
     align-items: center;
@@ -171,7 +171,6 @@ h2 span {
 
 .hero-content h1 span {
     color: var(--accent);
-    position: relative;
 }
 
 .hero-content p {
@@ -210,7 +209,6 @@ h2 span {
 .btn-green:hover {
     background: #21867a;
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(42, 157, 143, 0.4);
 }
 
 .btn-gold {
@@ -245,7 +243,7 @@ h2 span {
     font-weight: 500;
 }
 
-/* --- BANNER VISUAL & SLIDER FRAME --- */
+/* --- BANNER SLIDER FRAME --- */
 .hero-visual {
     flex: 0.9;
     max-width: 500px;
@@ -267,10 +265,6 @@ h2 span {
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease, opacity 0.6s ease;
-}
-
-.hero-frame:hover img {
-    transform: scale(1.03);
 }
 
 .hero-caption {
@@ -302,7 +296,6 @@ h2 span {
     top: 50%;
     transform: translateY(-50%);
     background: rgba(17, 34, 68, 0.7);
-    backdrop-filter: blur(4px);
     color: #fff;
     border: none;
     width: 46px;
@@ -318,7 +311,6 @@ h2 span {
 
 .slider-btn:hover {
     background: var(--accent);
-    transform: translateY(-50%) scale(1.1);
 }
 
 .slider-btn.prev { left: 16px; }
@@ -346,7 +338,7 @@ h2 span {
     border-radius: 4px;
 }
 
-/* --- STANDARD SECTIONS & GRIDS --- */
+/* --- OTHER SECTIONS & GRIDS --- */
 .two-col {
     display: flex;
     align-items: center;
@@ -477,11 +469,6 @@ h2 span {
     overflow: hidden;
     box-shadow: var(--shadow-subtle);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
-}
-
-.product-row:hover {
-    box-shadow: var(--shadow-hover);
 }
 
 .product-row.reverse {
