@@ -1,108 +1,51 @@
-// Mobile Menu Toggle
-const menuBtn = document.getElementById('menuBtn');
-const nav = document.getElementById('nav');
-
-if (menuBtn && nav) {
-    menuBtn.addEventListener('click', () => {
-        nav.classList.toggle('active');
-    });
-
-    nav.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            nav.classList.remove('active');
-        });
-    });
-}
-
-// Hero Section Image Slider
-const slides = [
-    { src: 'assets/dry-food.jpg', label: 'DRY FOOD SUPPLY', title: 'Quality supply for business.' },
-    { src: 'assets/packing.jpg', label: 'PACKING & PLASTIC', title: 'Practical packaging essentials.' },
-    { src: 'assets/safety.jpg', label: 'SAFETY ITEMS', title: 'Professional workplace protection.' },
-    { src: 'assets/technology.jpg', label: 'TECHNOLOGY & CONNECTIVITY', title: 'Modern business connectivity.' },
-    { src: 'assets/frozen.jpg', label: 'FROZEN ITEMS', title: 'Quality frozen food products.' }
+const slides=[
+  ["assets/dry-food.jpg","DRY FOOD SUPPLY"],
+  ["assets/packing.jpg","PACKING & PLASTIC"],
+  ["assets/safety.jpg","SAFETY ITEMS"],
+  ["assets/technology.jpg","TECHNOLOGY & CONNECTIVITY"],
+  ["assets/frozen.jpg","FROZEN ITEMS"]
 ];
-
-let currentSlide = 0;
-const heroImage = document.getElementById('heroImage');
-const heroLabel = document.getElementById('heroLabel');
-const dotsContainer = document.getElementById('dots');
-
-if (dotsContainer) {
-    dotsContainer.innerHTML = '';
-    slides.forEach((_, index) => {
-        const dot = document.createElement('div');
-        dot.classList.add('dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => {
-            currentSlide = index;
-            updateSlide();
-        });
-        dotsContainer.appendChild(dot);
-    });
+let current=0;
+const heroImage=document.getElementById("heroImage");
+const heroLabel=document.getElementById("heroLabel");
+const dots=document.getElementById("dots");
+function renderDots(){
+  slides.forEach((_,i)=>{
+    const b=document.createElement("button");
+    b.setAttribute("aria-label","Show slide "+(i+1));
+    b.onclick=()=>showSlide(i);
+    dots.appendChild(b);
+  });
 }
-
-function updateSlide() {
-    if (!heroImage) return;
-    heroImage.style.opacity = 0;
-    setTimeout(() => {
-        heroImage.src = slides[currentSlide].src;
-        if(heroLabel) heroLabel.textContent = slides[currentSlide].label;
-        heroImage.style.opacity = 1;
-    }, 250);
-
-    if (dotsContainer) {
-        document.querySelectorAll('.dot').forEach((dot, index) => {
-            dot.classList.toggle('active', index === currentSlide);
-        });
-    }
+function showSlide(i){
+  current=(i+slides.length)%slides.length;
+  heroImage.style.opacity="0";
+  setTimeout(()=>{
+    heroImage.src=slides[current][0];
+    heroLabel.textContent=slides[current][1];
+    heroImage.style.opacity="1";
+  },160);
+  [...dots.children].forEach((b,j)=>b.classList.toggle("active",j===current));
 }
+renderDots(); showSlide(0);
+document.getElementById("prev").onclick=()=>showSlide(current-1);
+document.getElementById("next").onclick=()=>showSlide(current+1);
+setInterval(()=>showSlide(current+1),5000);
 
-const nextBtn = document.getElementById('next');
-const prevBtn = document.getElementById('prev');
+const menuBtn=document.getElementById("menuBtn");
+const nav=document.getElementById("nav");
+menuBtn.onclick=()=>nav.classList.toggle("open");
+nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
 
-if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlide();
-    });
-}
-
-if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateSlide();
-    });
-}
-
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    updateSlide();
-}, 4000);
-
-// Scroll Reveal Animation
-document.addEventListener("DOMContentLoaded", () => {
-    const revealElements = document.querySelectorAll('.reveal-item');
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, {
-        threshold: 0.05
-    });
-
-    revealElements.forEach(el => observer.observe(el));
+document.getElementById("quoteForm").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=new FormData(e.target);
+  const text=`Hello Elite Horizon,\n\nName: ${f.get("name")}\nCompany: ${f.get("company")}\nPhone: ${f.get("phone")}\nEmail: ${f.get("email")}\nCategory: ${f.get("category")}\nRequirement: ${f.get("message")}`;
+  window.open("https://wa.me/966540783355?text="+encodeURIComponent(text),"_blank");
 });
 
-// Quote Form Submission
-const quoteForm = document.getElementById('quoteForm');
-if (quoteForm) {
-    quoteForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        alert('Thank you! Your quotation request has been sent successfully.');
-        quoteForm.reset();
-    });
-}
+/* Premium scroll reveal */
+const premiumObserver=new IntersectionObserver(entries=>entries.forEach(e=>{
+ if(e.isIntersecting){e.target.classList.add("visible");premiumObserver.unobserve(e.target)}
+}),{threshold:.12,rootMargin:"0px 0px -45px 0px"});
+document.querySelectorAll(".reveal").forEach(el=>premiumObserver.observe(el));
