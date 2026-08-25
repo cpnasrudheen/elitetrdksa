@@ -7,7 +7,6 @@ if (menuBtn && nav) {
         nav.classList.toggle('active');
     });
 
-    // Close menu on link click
     nav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
             nav.classList.remove('active');
@@ -15,7 +14,7 @@ if (menuBtn && nav) {
     });
 }
 
-// Hero Section Image Slider data
+// Hero Section Image Slider
 const slides = [
     { src: 'assets/dry-food.jpg', label: 'DRY FOOD SUPPLY', title: 'Quality supply for business.' },
     { src: 'assets/packing.jpg', label: 'PACKING & PLASTIC', title: 'Practical packaging essentials.' },
@@ -29,7 +28,6 @@ const heroImage = document.getElementById('heroImage');
 const heroLabel = document.getElementById('heroLabel');
 const dotsContainer = document.getElementById('dots');
 
-// Create slider dots dynamically
 if (dotsContainer) {
     dotsContainer.innerHTML = '';
     slides.forEach((_, index) => {
@@ -53,7 +51,6 @@ function updateSlide() {
         heroImage.style.opacity = 1;
     }, 250);
 
-    // Update dots
     if (dotsContainer) {
         document.querySelectorAll('.dot').forEach((dot, index) => {
             dot.classList.toggle('active', index === currentSlide);
@@ -61,7 +58,6 @@ function updateSlide() {
     }
 }
 
-// Next / Prev buttons
 const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 
@@ -79,42 +75,29 @@ if (prevBtn) {
     });
 }
 
-// Auto Slide every 4 seconds
 setInterval(() => {
     currentSlide = (currentSlide + 1) % slides.length;
     updateSlide();
 }, 4000);
 
-// Scroll Reveal Animation with Safety Fallback
+// Scroll Reveal Animation
 document.addEventListener("DOMContentLoaded", () => {
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+    const revealElements = document.querySelectorAll('.reveal-item');
 
-    const observer = new IntersectionObserver((entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
             }
         });
-    }, observerOptions);
+    }, {
+        threshold: 0.05
+    });
 
-    const revealElements = document.querySelectorAll('.reveal-item');
     revealElements.forEach(el => observer.observe(el));
-
-    // Safety fallback: makes everything visible automatically if observer takes time
-    setTimeout(() => {
-        revealElements.forEach(el => {
-            if (!el.classList.contains('active')) {
-                el.classList.add('active');
-            }
-        });
-    }, 1200);
 });
 
-// Quote Form Submission Handling
+// Quote Form Submission
 const quoteForm = document.getElementById('quoteForm');
 if (quoteForm) {
     quoteForm.addEventListener('submit', (e) => {
