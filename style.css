@@ -1,19 +1,19 @@
 /* ==========================================
-   ELITE HORIZON - CUSTOM DESIGNED STYLESHEET
+   ELITE HORIZON - LOGO MATCHED STYLESHEET
    ========================================== */
 
 :root {
-    --primary: #0B192C;
-    --primary-light: #1E3E62;
-    --accent: #C5A880;
-    --accent-dark: #A4835B;
+    --primary: #112244;       /* Logo-matched Deep Navy Blue */
+    --primary-light: #1d3557;
+    --accent: #2A9D8F;        /* Logo-matched Fresh Green */
+    --gold: #E9C46A;          /* Logo-matched Gold/Yellow */
     --bg-main: #F8FAFC;
     --card-bg: #FFFFFF;
     --text-main: #1E293B;
     --text-muted: #64748B;
     --border-color: #E2E8F0;
-    --shadow-subtle: 0 10px 30px -5px rgba(11, 25, 44, 0.05);
-    --shadow-hover: 0 20px 40px -10px rgba(11, 25, 44, 0.12);
+    --shadow-subtle: 0 10px 30px -5px rgba(17, 34, 68, 0.05);
+    --shadow-hover: 0 20px 40px -10px rgba(17, 34, 68, 0.12);
     --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -46,17 +46,16 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 6%;
-    background: rgba(255, 255, 255, 0.85);
+    padding: 18px 6%;
+    background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
     z-index: 1000;
-    transition: var(--transition);
 }
 
 .brand img {
-    height: 38px;
+    height: 42px;
     width: auto;
     object-fit: contain;
 }
@@ -76,23 +75,8 @@ body {
     position: relative;
 }
 
-.nav a::after {
-    content: '';
-    position: absolute;
-    bottom: -4px;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: var(--accent);
-    transition: var(--transition);
-}
-
 .nav a:hover {
     color: var(--primary);
-}
-
-.nav a:hover::after {
-    width: 100%;
 }
 
 .header-cta {
@@ -103,14 +87,13 @@ body {
     text-decoration: none;
     font-weight: 600;
     font-size: 14px;
-    box-shadow: 0 4px 12px rgba(11, 25, 44, 0.15);
+    box-shadow: 0 4px 12px rgba(17, 34, 68, 0.15);
     transition: var(--transition);
 }
 
 .header-cta:hover {
-    background: var(--primary-light);
+    background: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 6px 18px rgba(11, 25, 44, 0.25);
 }
 
 .menu-btn {
@@ -136,21 +119,16 @@ body {
     text-transform: uppercase;
 }
 
-.section-kicker.light {
-    color: var(--accent);
-}
-
 h2 {
     font-size: 38px;
     color: var(--primary);
     margin-bottom: 20px;
     line-height: 1.2;
     font-weight: 700;
-    letter-spacing: -0.5px;
 }
 
 h2 span {
-    color: var(--accent-dark);
+    color: var(--accent);
 }
 
 /* --- HERO SECTION --- */
@@ -161,8 +139,7 @@ h2 span {
     gap: 60px;
     min-height: 100vh;
     padding: 160px 6% 100px 6%;
-    background: linear-gradient(145deg, #ffffff 0%, #f1f5f9 100%);
-    position: relative;
+    background: linear-gradient(135deg, #f8fafc 0%, #edf2f7 100%);
 }
 
 .hero-content {
@@ -173,25 +150,23 @@ h2 span {
     font-size: 11.5px;
     font-weight: 700;
     color: var(--primary);
-    background: rgba(11, 25, 44, 0.06);
+    background: rgba(42, 157, 143, 0.1);
     padding: 6px 14px;
     border-radius: 30px;
     display: inline-block;
     margin-bottom: 20px;
-    letter-spacing: 0.5px;
 }
 
 .hero-content h1 {
-    font-size: 52px;
+    font-size: 50px;
     color: var(--primary);
     margin-bottom: 24px;
-    line-height: 1.12;
+    line-height: 1.15;
     font-weight: 800;
-    letter-spacing: -1px;
 }
 
 .hero-content h1 span {
-    color: var(--accent-dark);
+    color: var(--accent);
 }
 
 .hero-content p {
@@ -222,25 +197,24 @@ h2 span {
 }
 
 .btn-green {
-    background: var(--primary);
+    background: var(--accent);
     color: #fff;
-    box-shadow: 0 6px 20px rgba(11, 25, 44, 0.2);
+    box-shadow: 0 6px 20px rgba(42, 157, 143, 0.25);
 }
 
 .btn-green:hover {
-    background: var(--primary-light);
+    background: #21867a;
     transform: translateY(-3px);
 }
 
 .btn-gold {
-    background: var(--accent);
+    background: var(--gold);
     color: var(--primary);
     font-weight: 700;
 }
 
 .btn-gold:hover {
-    background: var(--accent-dark);
-    color: #fff;
+    background: #d4ac4d;
     transform: translateY(-3px);
 }
 
@@ -261,10 +235,9 @@ h2 span {
 .stats div small {
     color: var(--text-muted);
     font-size: 13px;
-    font-weight: 500;
 }
 
-/* --- HERO VISUAL & SLIDER FRAME --- */
+/* --- HERO VISUAL & SLIDER FRAME (Image Fallback Fix) --- */
 .hero-visual {
     flex: 0.9;
     max-width: 480px;
@@ -275,10 +248,9 @@ h2 span {
     position: relative;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 25px 50px -12px rgba(11, 25, 44, 0.25);
-    background: #fff;
+    box-shadow: var(--shadow-hover);
+    background: #e2e8f0; /* Fallback background if image fails */
     height: 400px;
-    border: 1px solid rgba(255,255,255,0.8);
 }
 
 .hero-frame img {
@@ -294,14 +266,14 @@ h2 span {
     left: 0;
     width: 100%;
     padding: 24px;
-    background: linear-gradient(to top, rgba(11,25,44,0.95) 0%, rgba(11,25,44,0.4) 70%, transparent 100%);
+    background: linear-gradient(to top, rgba(17,34,68,0.95) 0%, rgba(17,34,68,0.4) 70%, transparent 100%);
     color: #fff;
 }
 
 .hero-caption small {
     font-size: 11px;
     letter-spacing: 1.5px;
-    color: var(--accent);
+    color: var(--gold);
     display: block;
     margin-bottom: 4px;
     font-weight: 700;
@@ -316,8 +288,7 @@ h2 span {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(11, 25, 44, 0.6);
-    backdrop-filter: blur(4px);
+    background: rgba(17, 34, 68, 0.6);
     color: #fff;
     border: none;
     width: 44px;
@@ -333,7 +304,6 @@ h2 span {
 
 .slider-btn:hover {
     background: var(--primary);
-    transform: translateY(-50%) scale(1.05);
 }
 
 .slider-btn.prev { left: 16px; }
@@ -361,7 +331,7 @@ h2 span {
     border-radius: 4px;
 }
 
-/* --- TWO COLUMN LAYOUTS --- */
+/* --- GRIDS & CARDS (Fallback background added) --- */
 .two-col {
     display: flex;
     align-items: center;
@@ -381,15 +351,10 @@ h2 span {
 .about-image img, .industry-image img {
     width: 100%;
     border-radius: 12px;
+    background: #cbd5e1; /* Fallback */
     box-shadow: var(--shadow-subtle);
-    transition: var(--transition);
 }
 
-.about-image img:hover, .industry-image img:hover {
-    transform: scale(1.02);
-}
-
-/* --- VALUE GRID & WHY GRID --- */
 .value-grid, .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -403,31 +368,13 @@ h2 span {
     border-radius: 12px;
     box-shadow: var(--shadow-subtle);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.value-grid article::before, .why-grid article::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--accent);
-    opacity: 0;
+    border-top: 3px solid var(--accent);
     transition: var(--transition);
 }
 
 .value-grid article:hover, .why-grid article:hover {
     transform: translateY(-6px);
     box-shadow: var(--shadow-hover);
-    border-color: transparent;
-}
-
-.value-grid article:hover::before, .why-grid article:hover::before {
-    opacity: 1;
 }
 
 .value-grid b, .why-grid h3 {
@@ -441,7 +388,7 @@ h2 span {
 .why-grid span {
     font-size: 28px;
     font-weight: 800;
-    color: var(--accent-dark);
+    color: var(--gold);
     display: block;
     margin-bottom: 12px;
 }
@@ -449,14 +396,6 @@ h2 span {
 .value-grid p, .why-grid p {
     font-size: 14.5px;
     color: var(--text-muted);
-}
-
-/* --- BUSINESS GRID --- */
-.section-intro {
-    color: var(--text-muted);
-    margin-bottom: 50px;
-    font-size: 17px;
-    max-width: 600px;
 }
 
 .business-grid {
@@ -477,18 +416,13 @@ h2 span {
 .business-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--accent);
 }
 
 .business-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: var(--transition);
-}
-
-.business-card:hover img {
-    transform: scale(1.04);
+    background: #cbd5e1;
 }
 
 .business-card div {
@@ -498,7 +432,7 @@ h2 span {
 .business-card span {
     font-size: 11.5px;
     font-weight: 700;
-    color: var(--accent-dark);
+    color: var(--accent);
     display: block;
     margin-bottom: 6px;
     letter-spacing: 1px;
@@ -508,7 +442,6 @@ h2 span {
     font-size: 20px;
     margin-bottom: 12px;
     color: var(--primary);
-    font-weight: 700;
 }
 
 .business-card p {
@@ -532,12 +465,6 @@ h2 span {
     overflow: hidden;
     box-shadow: var(--shadow-subtle);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
-}
-
-.product-row:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-4px);
 }
 
 .product-row.reverse {
@@ -548,11 +475,7 @@ h2 span {
     width: 45%;
     height: 280px;
     object-fit: cover;
-    transition: var(--transition);
-}
-
-.product-row:hover img {
-    transform: scale(1.03);
+    background: #cbd5e1;
 }
 
 .product-row div {
@@ -564,32 +487,19 @@ h2 span {
     font-size: 24px;
     margin-bottom: 12px;
     color: var(--primary);
-    font-weight: 700;
 }
 
 .product-row p {
     color: var(--text-muted);
     margin-bottom: 24px;
-    font-size: 15.5px;
 }
 
 .product-row a {
-    color: var(--primary);
+    color: var(--accent);
     text-decoration: none;
     font-weight: 700;
-    font-size: 14.5px;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    transition: var(--transition);
 }
 
-.product-row a:hover {
-    color: var(--accent-dark);
-    gap: 10px;
-}
-
-/* --- INDUSTRIES TAGS --- */
 .industry-tags {
     display: flex;
     flex-wrap: wrap;
@@ -606,14 +516,6 @@ h2 span {
     color: var(--primary);
     box-shadow: var(--shadow-subtle);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
-}
-
-.industry-tags span:hover {
-    background: var(--primary);
-    color: #fff;
-    border-color: var(--primary);
-    transform: translateY(-2px);
 }
 
 /* --- QUOTE SECTION --- */
@@ -621,8 +523,6 @@ h2 span {
     background: var(--primary);
     color: #fff;
     padding: 120px 6%;
-    position: relative;
-    overflow: hidden;
 }
 
 .quote-inner {
@@ -641,7 +541,6 @@ h2 span {
 
 .quote-inner p {
     color: #94A3B8;
-    font-size: 16.5px;
 }
 
 #quoteForm {
@@ -669,22 +568,19 @@ h2 span {
     margin-bottom: 16px;
     background: #F8FAFC;
     color: var(--text-main);
-    transition: var(--transition);
 }
 
 #quoteForm input:focus, #quoteForm select:focus, #quoteForm textarea:focus {
     border-color: var(--accent);
     background: #fff;
-    box-shadow: 0 0 0 4px rgba(197, 168, 128, 0.15);
 }
 
 #quoteForm button {
     width: 100%;
     padding: 15px;
-    font-size: 15px;
 }
 
-/* --- CONTACT SECTION --- */
+/* --- CONTACT & FOOTER --- */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -698,17 +594,10 @@ h2 span {
     border-radius: 12px;
     box-shadow: var(--shadow-subtle);
     border: 1px solid var(--border-color);
-    transition: var(--transition);
-}
-
-.contact-grid div:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent);
 }
 
 .contact-grid small {
-    color: var(--accent-dark);
+    color: var(--accent);
     font-weight: 700;
     letter-spacing: 1.5px;
     display: block;
@@ -723,9 +612,8 @@ h2 span {
     font-weight: 700;
 }
 
-/* --- FOOTER --- */
 footer {
-    background: #060E18;
+    background: #091326;
     color: #fff;
     padding: 50px 6%;
     display: flex;
@@ -745,16 +633,10 @@ footer p {
     color: #64748B;
 }
 
-/* --- SCROLL REVEAL INITIAL STATE --- */
+/* --- SCROLL REVEAL FIX (Ensures text shows even if JS is slow) --- */
 .reveal-item {
-    opacity: 0;
-    transform: translateY(35px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.reveal-item.active {
-    opacity: 1;
-    transform: translateY(0);
+    opacity: 1; /* Fallback so text doesn't stay hidden */
+    transform: none;
 }
 
 /* --- MOBILE RESPONSIVE --- */
@@ -776,7 +658,7 @@ footer p {
         gap: 30px;
         padding: 40px 20px;
         box-shadow: 0 20px 30px rgba(0,0,0,0.1);
-        transition: 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        transition: 0.4s ease;
     }
 
     .nav.active {
@@ -791,15 +673,10 @@ footer p {
         flex-direction: column-reverse;
         padding-top: 140px;
         text-align: center;
-        min-height: auto;
     }
 
     .hero-content h1 {
-        font-size: 36px;
-    }
-
-    .hero-content p {
-        margin: 0 auto 30px auto;
+        font-size: 34px;
     }
 
     .hero-actions {
@@ -832,10 +709,6 @@ footer p {
 
     .form-grid {
         grid-template-columns: 1fr;
-    }
-
-    #quoteForm {
-        padding: 30px 20px;
     }
 
     footer {
