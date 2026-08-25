@@ -1,5 +1,5 @@
 /* ==========================================
-   ELITE HORIZON - COMPLETE CUSTOM STYLESHEET
+   ELITE HORIZON - FINAL PERFECT STYLESHEET
    ========================================== */
 
 :root {
@@ -116,6 +116,10 @@ body {
     letter-spacing: 2px;
     margin-bottom: 12px;
     text-transform: uppercase;
+}
+
+.section-kicker.light {
+    color: var(--gold);
 }
 
 h2 {
@@ -338,7 +342,7 @@ h2 span {
     border-radius: 4px;
 }
 
-/* --- OTHER SECTIONS & GRIDS --- */
+/* --- ABOUT & TWO-COL --- */
 .two-col {
     display: flex;
     align-items: center;
@@ -357,10 +361,13 @@ h2 span {
 
 .about-image img, .industry-image img {
     width: 100%;
+    height: 350px;
+    object-fit: cover;
     border-radius: 14px;
     box-shadow: var(--shadow-subtle);
 }
 
+/* --- GRIDS & CARDS --- */
 .value-grid, .why-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -454,6 +461,7 @@ h2 span {
     color: var(--text-muted);
 }
 
+/* --- PRODUCT ROWS --- */
 .product-list {
     display: flex;
     flex-direction: column;
@@ -503,6 +511,13 @@ h2 span {
     font-weight: 700;
 }
 
+/* --- INDUSTRIES TAGS --- */
+.section-intro {
+    color: var(--text-muted);
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+
 .industry-tags {
     display: flex;
     flex-wrap: wrap;
@@ -521,7 +536,7 @@ h2 span {
     border: 1px solid var(--border-color);
 }
 
-/* --- QUOTE SECTION & CONTACT --- */
+/* --- QUOTE SECTION --- */
 .quote-section {
     background: var(--primary);
     color: #fff;
@@ -583,6 +598,7 @@ h2 span {
     padding: 15px;
 }
 
+/* --- CONTACT & FOOTER --- */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
