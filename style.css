@@ -1,5 +1,5 @@
 /* ==========================================
-   ELITE HORIZON - STABLE & CLEAN STYLESHEET
+   ELITE HORIZON - FINAL ANIMATED STYLESHEET
    ========================================== */
 
 :root {
@@ -14,7 +14,7 @@
     --border-color: #E2E8F0;
     --shadow-subtle: 0 10px 30px -5px rgba(17, 34, 68, 0.05);
     --shadow-hover: 0 20px 40px -10px rgba(17, 34, 68, 0.12);
-    --transition: all 0.3s ease;
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -651,10 +651,16 @@ footer p {
     color: #64748B;
 }
 
-/* --- SAFE VISIBILITY (FIXED BLANK SCREEN BUG) --- */
+/* --- SMOOTH SCROLL REVEAL ANIMATION (SAFE) --- */
 .reveal-item {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal-item.active {
     opacity: 1;
-    transform: none;
+    transform: translateY(0);
 }
 
 /* --- MOBILE RESPONSIVE --- */
