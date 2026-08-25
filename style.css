@@ -1,5 +1,5 @@
 /* ==========================================
-   ELITE HORIZON - GRADIENT BACKGROUND CSS
+   ELITE HORIZON - COMPLETE POLISHED STYLESHEET
    ========================================== */
 
 :root {
@@ -624,6 +624,7 @@ h2 span {
     padding: 15px;
 }
 
+/* --- PERFECT CLEAN CONTACT CARDS --- */
 .contact-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -634,7 +635,7 @@ h2 span {
 .contact-card {
     background: var(--card-bg);
     backdrop-filter: blur(10px);
-    padding: 35px 30px;
+    padding: 40px 30px;
     border-radius: 16px;
     box-shadow: var(--shadow-subtle);
     border: 1px solid var(--border-color);
@@ -662,8 +663,9 @@ h2 span {
 }
 
 .contact-icon {
-    font-size: 28px;
-    margin-bottom: 15px;
+    font-size: 32px;
+    margin-bottom: 18px;
+    display: inline-block;
 }
 
 .contact-card small {
@@ -671,14 +673,14 @@ h2 span {
     font-weight: 700;
     letter-spacing: 1.5px;
     display: block;
-    margin-bottom: 6px;
+    margin-bottom: 8px;
     font-size: 12px;
 }
 
 .contact-card a, .contact-card p {
     color: var(--primary);
     text-decoration: none;
-    font-size: 17px;
+    font-size: 18px;
     font-weight: 700;
     display: block;
     transition: var(--transition);
