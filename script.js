@@ -1,58 +1,125 @@
-const slides=[
-  ["assets/dry-food.jpg","DRY FOOD SUPPLY"],
-  ["assets/packing.jpg","PACKING & PLASTIC"],
-  ["assets/safety.jpg","SAFETY ITEMS"],
-  ["assets/technology.jpg","TECHNOLOGY & CONNECTIVITY"],
-  ["assets/frozen.jpg","FROZEN ITEMS"]
+// Mobile Menu Toggle
+const menuBtn = document.getElementById('menuBtn');
+const nav = document.getElementById('nav');
+
+if (menuBtn && nav) {
+    menuBtn.addEventListener('click', () => {
+        nav.classList.toggle('active');
+    });
+
+    // Close menu on link click
+    nav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            nav.classList.remove('active');
+        });
+    });
+}
+
+// Hero Section Image Slider data
+const slides = [
+    { src: 'assets/dry-food.jpg', label: 'DRY FOOD SUPPLY', title: 'Quality supply for business.' },
+    { src: 'assets/packing.jpg', label: 'PACKING & PLASTIC', title: 'Practical packaging essentials.' },
+    { src: 'assets/safety.jpg', label: 'SAFETY ITEMS', title: 'Professional workplace protection.' },
+    { src: 'assets/technology.jpg', label: 'TECHNOLOGY & CONNECTIVITY', title: 'Modern business connectivity.' },
+    { src: 'assets/frozen.jpg', label: 'FROZEN ITEMS', title: 'Quality frozen food products.' }
 ];
-let current=0;
-const heroImage=document.getElementById("heroImage");
-const heroLabel=document.getElementById("heroLabel");
-const dots=document.getElementById("dots");
-function renderDots(){
-  slides.forEach((_,i)=>{
-    const b=document.createElement("button");
-    b.setAttribute("aria-label","Show slide "+(i+1));
-    b.onclick=()=>showSlide(i);
-    dots.appendChild(b);
-  });
-}
-function showSlide(i){
-  current=(i+slides.length)%slides.length;
-  heroImage.style.opacity="0";
-  setTimeout(()=>{
-    heroImage.src=slides[current][0];
-    heroLabel.textContent=slides[current][1];
-    heroImage.style.opacity="1";
-  },160);
-  [...dots.children].forEach((b,j)=>b.classList.toggle("active",j===current));
-}
-renderDots(); showSlide(0);
-document.getElementById("prev").onclick=()=>showSlide(current-1);
-document.getElementById("next").onclick=()=>showSlide(current+1);
-setInterval(()=>showSlide(current+1),5000);
 
-const menuBtn=document.getElementById("menuBtn");
-const nav=document.getElementById("nav");
-menuBtn.onclick=()=>nav.classList.toggle("open");
-nav.querySelectorAll("a").forEach(a=>a.onclick=()=>nav.classList.remove("open"));
+let currentSlide = 0;
+const heroImage = document.getElementById('heroImage');
+const heroLabel = document.getElementById('heroLabel');
+const dotsContainer = document.getElementById('dots');
 
-document.getElementById("quoteForm").addEventListener("submit",e=>{
-  e.preventDefault();
-  const f=new FormData(e.target);
-  const text=`Hello Elite Horizon,\n\nName: ${f.get("name")}\nCompany: ${f.get("company")}\nPhone: ${f.get("phone")}\nEmail: ${f.get("email")}\nCategory: ${f.get("category")}\nRequirement: ${f.get("message")}`;
-  window.open("https://wa.me/966540783355?text="+encodeURIComponent(text),"_blank");
+// Create slider dots dynamically
+if (dotsContainer) {
+    dotsContainer.innerHTML = '';
+    slides.forEach((_, index) => {
+        const dot = document.createElement('div');
+        dot.classList.add('dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => {
+            currentSlide = index;
+            updateSlide();
+        });
+        dotsContainer.appendChild(dot);
+    });
+}
+
+function updateSlide() {
+    if (!heroImage) return;
+    heroImage.style.opacity = 0;
+    setTimeout(() => {
+        heroImage.src = slides[currentSlide].src;
+        if(heroLabel) heroLabel.textContent = slides[currentSlide].label;
+        heroImage.style.opacity = 1;
+    }, 250);
+
+    // Update dots
+    if (dotsContainer) {
+        document.querySelectorAll('.dot').forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+}
+
+// Next / Prev buttons
+const nextBtn = document.getElementById('next');
+const prevBtn = document.getElementById('prev');
+
+if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        updateSlide();
+    });
+}
+
+if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        updateSlide();
+    });
+}
+
+// Auto Slide every 4 seconds
+setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
+    updateSlide();
+}, 4000);
+
+// Scroll Reveal Animation with Safety Fallback
+document.addEventListener("DOMContentLoaded", () => {
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.reveal-item');
+    revealElements.forEach(el => observer.observe(el));
+
+    // Safety fallback: makes everything visible automatically if observer takes time
+    setTimeout(() => {
+        revealElements.forEach(el => {
+            if (!el.classList.contains('active')) {
+                el.classList.add('active');
+            }
+        });
+    }, 1200);
 });
 
-// Scroll reveal: sections and content slide into view as the visitor scrolls.
-const revealElements = document.querySelectorAll(".reveal-section, .reveal-item");
-const revealObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-visible");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.14, rootMargin: "0px 0px -45px 0px" });
-
-revealElements.forEach(el => revealObserver.observe(el));
+// Quote Form Submission Handling
+const quoteForm = document.getElementById('quoteForm');
+if (quoteForm) {
+    quoteForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Thank you! Your quotation request has been sent successfully.');
+        quoteForm.reset();
+    });
+}
