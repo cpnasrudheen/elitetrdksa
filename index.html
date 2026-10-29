@@ -1,3 +1,941 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Elite Horizon | Choose a Division</title><meta name="description" content="Explore Elite Horizon Trading and Consulting Company or Elite Horizon Business Setup & Strategic Consultancy."><style>
-:root{--navy:#20206a;--green:#269447;--gold:#f2ad1b;--muted:#647080}*{box-sizing:border-box}body{margin:0;font-family:Inter,Arial,sans-serif;color:#1b2430;background:#f6f8fc;line-height:1.6}.container{width:min(1120px,92%);margin:auto}header{background:linear-gradient(135deg,#10175c,#20206a 50%,#0f5e6b);color:#fff;padding:42px 0 80px;text-align:center}header img{width:76px;height:76px;object-fit:contain;background:#fff;border-radius:18px;padding:8px}header h1{font-size:clamp(34px,5vw,58px);line-height:1.1;margin:20px 0 12px}header p{max-width:680px;margin:auto;color:#dbe4f3;font-size:17px}.main{padding:0 0 80px;margin-top:-36px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}.division{background:#fff;border:1px solid #e0e7ef;border-radius:26px;padding:34px;box-shadow:0 20px 55px #17234c14;display:flex;flex-direction:column;min-height:350px;transition:.25s}.division:hover{transform:translateY(-7px);box-shadow:0 25px 65px #17234c24}.label{font-size:12px;letter-spacing:2px;font-weight:900;color:var(--green);text-transform:uppercase}.division h2{color:var(--navy);font-size:clamp(25px,3vw,35px);line-height:1.15;margin:14px 0}.division p{color:var(--muted);margin:0 0 24px}.icon{width:58px;height:58px;border-radius:17px;background:#e8f6ec;display:grid;place-items:center;font-size:28px}.division:nth-child(2) .icon{background:#fff3d8}.open{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:14px 20px;border-radius:999px;background:var(--green);color:white;font-weight:800;width:max-content;max-width:100%}.division:nth-child(2) .open{background:var(--navy)}footer{text-align:center;padding:24px;color:#6b7482;font-size:13px}@media(max-width:700px){header{padding:35px 0 65px}.cards{grid-template-columns:1fr}.division{min-height:unset;padding:27px}.main{padding-bottom:55px}}
-</style></head><body><header><div class="container"><img src="assets/logo.png" alt="Elite Horizon logo"><h1>Welcome to Elite Horizon</h1><p>Please choose the division you want to explore. Each division opens on its own dedicated page, with separate services and information.</p></div></header><main class="main"><div class="container cards"><a class="division" href="trading.html"><div class="icon">▦</div><div class="label" style="margin-top:22px">Division 01 · Trading & Supply</div><h2>Elite Horizon Trading and Consulting Company</h2><p>Explore our product supply categories, including dry food, frozen items, packing and plastic, safety equipment, technology and connectivity solutions, and the industries we serve.</p><span class="open">Open Trading & Consulting <span>→</span></span></a><a class="division" href="consultancy.html"><div class="icon">✦</div><div class="label" style="margin-top:22px">Division 02 · Business Services</div><h2>Elite Horizon Business Setup & Strategic Consultancy</h2><p>Explore business setup and formation, MISA and CR support, visa and Iqama services, PRO/GRO, compliance, strategic management, manpower, branding and corporate support.</p><span class="open">Open Business Consultancy <span>→</span></span></a></div></main><footer>© Elite Horizon · Saudi Arabia · <a href="mailto:info@elitetrdksa.com">info@elitetrdksa.com</a></footer></body></html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Elite Horizon | Business & Trading Solutions</title>
+
+<meta name="description"
+content="Elite Horizon Business Setup & Strategic Consultancy and Elite Horizon Trading and Consulting Company in Saudi Arabia.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<style>
+:root {
+    --green: #082F23;
+    --green-light: #0A4937;
+    --gold: #C9AD58;
+    --gold-dark: #A88A2F;
+    --white: #FFFFFF;
+    --background: #F4F6F8;
+    --text: #17251F;
+    --muted: #59645E;
+    --border: #DCE5DF;
+    --shadow: 0 24px 60px rgba(8, 47, 35, 0.10);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--background);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* TOP BRAND BAR */
+
+.top-bar {
+    height: 118px;
+    background: linear-gradient(
+        110deg,
+        var(--green),
+        #104C3B
+    );
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.top-bar::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 220px;
+    top: -85px;
+    right: 19%;
+    transform: rotate(45deg);
+    background: var(--gold);
+    opacity: .95;
+}
+
+/* PAGE */
+
+.page {
+    width: min(1660px, calc(100% - 80px));
+    margin: 62px auto 70px;
+    position: relative;
+    z-index: 2;
+}
+
+/* INTRO */
+
+.intro {
+    text-align: center;
+    margin: 0 auto 34px;
+    max-width: 780px;
+    padding: 0 15px;
+    animation: fadeUp .8s ease both;
+}
+
+.intro-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--gold-dark);
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.intro-label::before,
+.intro-label::after {
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.intro h1 {
+    font-size: clamp(28px, 3.2vw, 44px);
+    line-height: 1.18;
+    font-weight: 800;
+    letter-spacing: -1.5px;
+    color: var(--green);
+}
+
+.intro p {
+    margin-top: 13px;
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+/* CARDS GRID */
+
+.divisions {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+/* MAIN CARD */
+
+.division-card {
+    position: relative;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 27px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    animation: fadeUp .8s ease both;
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease;
+}
+
+.division-card:nth-child(2) {
+    animation-delay: .12s;
+}
+
+.division-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 32px 70px rgba(8, 47, 35, .16);
+}
+
+/* IMAGE AREA */
+
+.card-visual {
+    min-height: 355px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px 26px;
+    overflow: hidden;
+    background: #F7F8F7;
+    isolation: isolate;
+}
+
+/*
+Add the actual images later:
+
+assets/business-setup-bg.jpg
+assets/trading-bg.jpg
+*/
+
+.card-visual::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background-image: var(--card-image);
+    background-size: cover;
+    background-position: center;
+    transition: transform .7s ease;
+}
+
+.division-card:hover .card-visual::before {
+    transform: scale(1.045);
+}
+
+.card-visual::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background: linear-gradient(
+        90deg,
+        rgba(255,255,255,.99) 0%,
+        rgba(255,255,255,.94) 45%,
+        rgba(255,255,255,.70) 72%,
+        rgba(255,255,255,.25) 100%
+    );
+}
+
+/* BRAND LOGO */
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 13px;
+    max-width: 100%;
+    padding: 10px 13px;
+    background: rgba(255,255,255,.94);
+    border: 1px solid rgba(255,255,255,.85);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+}
+
+.brand img {
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    min-width: 0;
+}
+
+.brand-text strong {
+    display: block;
+    font-size: 16px;
+    line-height: 1.3;
+    font-weight: 800;
+    color: var(--green);
+}
+
+.brand-text span {
+    display: block;
+    margin-top: 5px;
+    font-size: 9px;
+    line-height: 1.5;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #49554E;
+    text-transform: uppercase;
+}
+
+/* VISUAL CONTENT */
+
+.visual-content {
+    margin-top: auto;
+    padding-top: 48px;
+    max-width: 570px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin-bottom: 13px;
+    color: var(--gold-dark);
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 1.6;
+}
+
+.visual-content h2 {
+    font-size: clamp(27px, 2.8vw, 39px);
+    line-height: 1.12;
+    font-weight: 800;
+    letter-spacing: -1.4px;
+    color: var(--green);
+    max-width: 570px;
+}
+
+.visual-content h2 span {
+    color: var(--gold-dark);
+}
+
+.visual-content p {
+    margin-top: 16px;
+    max-width: 520px;
+    color: #34423B;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+/* LOWER INFORMATION PANEL */
+
+.card-details {
+    background: var(--green);
+    color: var(--white);
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-number {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    color: #E7D8A7;
+    font-size: 10px;
+    line-height: 1.7;
+    font-weight: 800;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+}
+
+.section-number::before {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: var(--gold);
+    flex-shrink: 0;
+}
+
+.card-details h3 {
+    font-size: clamp(23px, 2.1vw, 29px);
+    line-height: 1.25;
+    font-weight: 700;
+    letter-spacing: -.7px;
+    max-width: 500px;
+}
+
+.card-details > p {
+    margin-top: 13px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: rgba(255,255,255,.83);
+    max-width: 590px;
+}
+
+/* SERVICE TAGS */
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 22px 0 25px;
+}
+
+.tags span {
+    padding: 10px 12px;
+    border: 1px solid rgba(255,255,255,.25);
+    color: rgba(255,255,255,.95);
+    font-size: 10px;
+    line-height: 1.4;
+    font-weight: 500;
+    transition: background .25s, border-color .25s;
+}
+
+.tags span:hover {
+    background: rgba(201,173,88,.12);
+    border-color: var(--gold);
+}
+
+/* CTA BUTTON */
+
+.card-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    width: 100%;
+    min-height: 60px;
+    padding: 17px 20px;
+    margin-top: auto;
+    background: var(--gold);
+    color: var(--green);
+    font-size: 13px;
+    line-height: 1.5;
+    font-weight: 800;
+    border: 1px solid transparent;
+    transition:
+        background .25s ease,
+        color .25s ease,
+        transform .25s ease;
+}
+
+.card-button .arrow {
+    font-size: 25px;
+    line-height: 1;
+    transition: transform .25s ease;
+}
+
+.card-button:hover {
+    background: #E0C878;
+}
+
+.card-button:hover .arrow {
+    transform: translateX(5px);
+}
+
+/* TRADING CARD */
+
+.trading-card .card-details {
+    background: #0A3528;
+}
+
+.trading-card .card-button {
+    background: #FFFFFF;
+    color: var(--green);
+}
+
+.trading-card .card-button:hover {
+    background: var(--gold);
+}
+
+.trading-card .eyebrow {
+    color: var(--gold-dark);
+}
+
+/* FOOTER STRIP */
+
+.bottom-strip {
+    margin-top: 26px;
+    padding: 19px 23px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    background: #FFFFFF;
+    border: 1px solid var(--border);
+    border-radius: 13px;
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--muted);
+}
+
+.bottom-strip strong {
+    color: var(--green);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .7px;
+}
+
+.footer-gold {
+    width: 45px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 5px;
+}
+
+/* ANIMATION */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .page {
+        width: calc(100% - 40px);
+        margin-top: 45px;
+    }
+
+    .divisions {
+        gap: 20px;
+    }
+
+    .card-visual {
+        min-height: 350px;
+        padding: 22px;
+    }
+
+    .brand {
+        gap: 9px;
+        padding: 9px;
+    }
+
+    .brand img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand-text strong {
+        font-size: 13px;
+    }
+
+    .brand-text span {
+        font-size: 8px;
+        letter-spacing: .5px;
+    }
+
+    .visual-content h2 {
+        font-size: 29px;
+    }
+
+    .card-details {
+        padding: 23px;
+    }
+
+    .card-details h3 {
+        font-size: 23px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 720px) {
+    .top-bar {
+        height: 90px;
+    }
+
+    .top-bar::after {
+        right: 14%;
+    }
+
+    .page {
+        width: calc(100% - 28px);
+        margin: 30px auto 40px;
+    }
+
+    .intro {
+        margin-bottom: 25px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+        letter-spacing: -.8px;
+    }
+
+    .intro p {
+        font-size: 13px;
+    }
+
+    .intro-label {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .divisions {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .division-card {
+        border-radius: 21px;
+    }
+
+    .card-visual {
+        min-height: 350px;
+        padding: 20px;
+    }
+
+    .card-visual::after {
+        background: linear-gradient(
+            90deg,
+            rgba(255,255,255,.97),
+            rgba(255,255,255,.82) 68%,
+            rgba(255,255,255,.40)
+        );
+    }
+
+    .brand {
+        max-width: 100%;
+        gap: 10px;
+    }
+
+    .brand img {
+        width: 43px;
+        height: 43px;
+    }
+
+    .brand-text strong {
+        font-size: 13px;
+    }
+
+    .brand-text span {
+        font-size: 8px;
+        letter-spacing: .4px;
+    }
+
+    .visual-content {
+        padding-top: 40px;
+    }
+
+    .visual-content h2 {
+        font-size: 32px;
+        letter-spacing: -.9px;
+    }
+
+    .visual-content p {
+        font-size: 12px;
+        line-height: 1.8;
+    }
+
+    .card-details {
+        padding: 24px 20px;
+    }
+
+    .card-details h3 {
+        font-size: 25px;
+    }
+
+    .card-details > p {
+        font-size: 12px;
+    }
+
+    .tags {
+        gap: 7px;
+        margin: 20px 0 23px;
+    }
+
+    .tags span {
+        padding: 9px 10px;
+        font-size: 9px;
+    }
+
+    .card-button {
+        min-height: 56px;
+        padding: 15px;
+        font-size: 12px;
+    }
+
+    .bottom-strip {
+        flex-wrap: wrap;
+        padding: 16px;
+        font-size: 9px;
+    }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 380px) {
+    .visual-content h2 {
+        font-size: 27px;
+    }
+
+    .card-visual {
+        min-height: 330px;
+        padding: 15px;
+    }
+
+    .card-details {
+        padding: 20px 15px;
+    }
+
+    .brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .brand-text strong {
+        font-size: 12px;
+    }
+
+    .brand-text span {
+        font-size: 7px;
+    }
+}
+
+/* ACCESSIBILITY */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="top-bar"></div>
+
+<main class="page">
+
+    <!-- INTRODUCTION -->
+
+    <header class="intro">
+
+        <div class="intro-label">
+            Elite Horizon
+        </div>
+
+        <h1>
+            Two Divisions.<br>
+            One Trusted Partner.
+        </h1>
+
+        <p>
+            Business consultancy and professional trading solutions
+            designed to support your growth in Saudi Arabia.
+        </p>
+
+    </header>
+
+
+    <!-- TWO BUSINESS DIVISIONS -->
+
+    <section class="divisions" aria-label="Elite Horizon business divisions">
+
+
+        <!-- DIVISION 01: BUSINESS SETUP -->
+
+        <article class="division-card consultancy-card"
+        id="business-consultancy">
+
+            <div class="card-visual"
+            style="--card-image: url('assets/business-setup-bg.jpg');">
+
+                <div class="brand">
+
+                    <img
+                    src="assets/business-setup-logo.png"
+                    alt="Elite Horizon Business Setup logo">
+
+                    <div class="brand-text">
+
+                        <strong>Elite Horizon</strong>
+
+                        <span>
+                            Business Setup &amp; Strategic Consultancy
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="visual-content">
+
+                    <span class="eyebrow">
+                        Your Partner for Business Growth
+                    </span>
+
+                    <h2>
+                        Build Your Business
+                        in Saudi Arabia<span>.</span>
+                    </h2>
+
+                    <p>
+                        Professional support for business formation,
+                        government procedures, compliance and strategic
+                        business growth in Saudi Arabia.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-details">
+
+                <div class="section-number">
+                    Division 01 · Business Services
+                </div>
+
+                <h3>
+                    Elite Horizon Business Setup &amp;
+                    Strategic Consultancy
+                </h3>
+
+                <p>
+                    Explore business setup and formation, MISA and CR
+                    support, visa and Iqama services, PRO/GRO,
+                    compliance, strategic management, manpower,
+                    branding and corporate support.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>Company Formation</span>
+                    <span>Government Relations</span>
+                    <span>Compliance</span>
+                    <span>Strategic Advisory</span>
+
+                </div>
+
+
+                <a class="card-button"
+                href="business-setup.html">
+
+                    <span>Explore Business Consultancy</span>
+
+                    <span class="arrow" aria-hidden="true">→</span>
+
+                </a>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- DIVISION 02: TRADING -->
+
+        <article class="division-card trading-card"
+        id="trading-consulting">
+
+            <div class="card-visual"
+            style="--card-image: url('assets/trading-bg.jpg');">
+
+                <div class="brand">
+
+                    <img
+                    src="assets/trading-logo.png"
+                    alt="Elite Horizon Trading and Consulting Company logo">
+
+                    <div class="brand-text">
+
+                        <strong>Elite Horizon</strong>
+
+                        <span>
+                            Trading and Consulting Company
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+                <div class="visual-content">
+
+                    <span class="eyebrow">
+                        Quality Products · Trusted Partnerships
+                    </span>
+
+                    <h2>
+                        Reliable Supply.
+                        Trusted Solutions<span>.</span>
+                    </h2>
+
+                    <p>
+                        Dependable sourcing and professional supply
+                        solutions for businesses across Saudi Arabia.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="card-details">
+
+                <div class="section-number">
+                    Division 02 · Trading &amp; Supply
+                </div>
+
+                <h3>
+                    Elite Horizon Trading and
+                    Consulting Company
+                </h3>
+
+                <p>
+                    Explore our product supply categories, including
+                    dry food, frozen items, packing and plastic,
+                    safety equipment, technology and connectivity
+                    solutions, and the industries we serve.
+                </p>
+
+
+                <div class="tags">
+
+                    <span>Dry Food</span>
+                    <span>Packing &amp; Plastic</span>
+                    <span>Safety Items</span>
+                    <span>Technology</span>
+                    <span>Frozen Items</span>
+
+                </div>
+
+
+                <a class="card-button"
+                href="trading.html">
+
+                    <span>Explore Trading &amp; Consulting</span>
+
+                    <span class="arrow" aria-hidden="true">→</span>
+
+                </a>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="bottom-strip">
+
+        <strong>ELITE HORIZON</strong>
+
+        <div class="footer-gold"></div>
+
+        <span>
+            Business Setup · Strategic Consultancy · Trading &amp; Supply
+        </span>
+
+    </footer>
+
+</main>
+
+</body>
+</html>
+```
