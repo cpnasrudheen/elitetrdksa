@@ -1,13 +1,12 @@
-ELITE HORIZON — FIXED COMPLETE WEBSITE
+ELITE HORIZON WEBSITE PACKAGE
 
-This package fixes the broken-image problem visible on the live site.
+Files:
+- index.html: homepage with two separate clickable divisions
+- trading.html: existing Trading and Consulting Company website design preserved
+- consultancy.html: separate Business Setup & Strategic Consultancy page based on the supplied company-profile PDF
+- assets/: intentionally left empty until you provide the images
 
-Upload/replace:
-- index.html
-- assets/ (entire folder)
+To preview: open index.html in a browser.
+For hosting, upload these HTML files to the same root folder. Add the image assets later using the filenames already referenced in trading.html (hero.jpg, dry-food.jpg, packing.jpg, safety.jpg, technology.jpg, frozen.jpg, industries.jpg, commitment.jpg, logo.png, favicon.png).
 
-IMPORTANT:
-Replace the existing assets folder with this one, or upload these files into the existing assets folder.
-Do NOT upload only index.html.
-
-The logo is now logo.png and all hero/product/industry/commitment images are included locally.
+Note: Consultancy PDF lists info@elitehorizon.sa and www.elitehorizon.sa, while the trading division uses info@elitetrdksa.com. They have been kept separate as supplied. Confirm the consultancy phone number before publishing because the PDF text shows a masked number.
