@@ -1,14 +1,29 @@
-ELITE HORIZON WEBSITE — UPDATED UI/UX PACKAGE
+ELITE HORIZON WEBSITE — STARTER PACKAGE
 
 Files:
-- index.html: main division-selection homepage
-- consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
-- trading.html: Elite Horizon Trading and Consulting Company
-- assets/: logos and supplied website imagery
+- index.html       Main page with two separate division cards
+- consultancy.html Elite Horizon Business Setup & Strategic Consultancy
+- trading.html     Elite Horizon Trading and Consulting Company
+- styles.css       Responsive design and shared brand styling
+- script.js        Mobile navigation and small interactions
+- assets/          Place final logo and image files here when supplied
 
-How to use:
-1. Extract this ZIP while preserving the assets folder.
-2. Open index.html to preview locally, or upload all files/folders to the same website root on your hosting.
-3. Keep the three HTML files in the same folder and the assets folder beside them.
+HOW TO PREVIEW
+1. Extract the ZIP.
+2. Open index.html in a browser. For best results, use VS Code + Live Server.
+3. The two division cards open separate pages: consultancy.html and trading.html.
 
-Both divisions now use a consistent Elite Horizon green-and-gold theme, with responsive layouts for desktop and mobile.
+BRAND COLOURS
+- Consultancy: deep green + gold, based on the supplied consultancy logo.
+- Trading: deep navy blue + gold/yellow, based on the supplied trading logo.
+- Both pages share typography, spacing, components and responsive behaviour.
+
+IMPORTANT
+No logo/image files have been inserted yet, as requested. The current header marks are temporary CSS/text marks so no broken-image icons appear. When the final logos and background photos are supplied, add them into assets/ and update the relevant HTML/CSS.
+
+Contact links currently use:
+- info@elitetrdksa.com
+- WhatsApp: +966 54 078 8355
+- Website: elitetrdksa.com
+
+Please verify all service descriptions and contact details before publishing.
