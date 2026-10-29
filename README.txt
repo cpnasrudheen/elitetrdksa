@@ -1,11 +1,12 @@
-ELITE HORIZON WEBSITE — TWO DIVISIONS
+ELITE HORIZON WEBSITE — TWO SEPARATE DIVISIONS
 
-Files are arranged at the correct website root level.
-
-- index.html: landing page with two separate clickable divisions
-- trading.html: Elite Horizon Trading and Consulting Company
+Files:
+- index.html: main landing page with two separate clickable division cards
 - consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
-- assets/: images and logo used by the pages
+- trading.html: Elite Horizon Trading and Consulting Company
+- assets/: website images and the separate logos supplied for each division
 
-LOCAL PREVIEW: Extract the ZIP and open index.html.
-DEPLOYMENT: Upload the CONTENTS of this folder to your website hosting public root (for GitHub Pages, commit index.html, trading.html, consultancy.html, and assets/ to the repository root). Do not upload the outer ZIP or put all files inside an extra elite_final folder.
+The Trading page content/layout is preserved; the division selector and logo placement have been updated to match the supplied logos and green/gold + blue/orange brand palettes.
+
+LOCAL PREVIEW: Extract this ZIP and open index.html.
+DEPLOYMENT: Upload the CONTENTS of this folder to the website hosting public root. Keep index.html, trading.html, consultancy.html and assets/ together. Do not upload the ZIP itself as the website.
