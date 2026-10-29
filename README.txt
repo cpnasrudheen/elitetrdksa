@@ -1,12 +1,11 @@
-ELITE HORIZON WEBSITE PACKAGE
+ELITE HORIZON WEBSITE — TWO DIVISIONS
 
-Files:
-- index.html: homepage with two separate clickable divisions
-- trading.html: existing Trading and Consulting Company website design preserved
-- consultancy.html: separate Business Setup & Strategic Consultancy page based on the supplied company-profile PDF
-- assets/: intentionally left empty until you provide the images
+Files are arranged at the correct website root level.
 
-To preview: open index.html in a browser.
-For hosting, upload these HTML files to the same root folder. Add the image assets later using the filenames already referenced in trading.html (hero.jpg, dry-food.jpg, packing.jpg, safety.jpg, technology.jpg, frozen.jpg, industries.jpg, commitment.jpg, logo.png, favicon.png).
+- index.html: landing page with two separate clickable divisions
+- trading.html: Elite Horizon Trading and Consulting Company
+- consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
+- assets/: images and logo used by the pages
 
-Note: Consultancy PDF lists info@elitehorizon.sa and www.elitehorizon.sa, while the trading division uses info@elitetrdksa.com. They have been kept separate as supplied. Confirm the consultancy phone number before publishing because the PDF text shows a masked number.
+LOCAL PREVIEW: Extract the ZIP and open index.html.
+DEPLOYMENT: Upload the CONTENTS of this folder to your website hosting public root (for GitHub Pages, commit index.html, trading.html, consultancy.html, and assets/ to the repository root). Do not upload the outer ZIP or put all files inside an extra elite_final folder.
