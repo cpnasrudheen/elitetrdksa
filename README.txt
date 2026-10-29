@@ -1,12 +1,14 @@
-ELITE HORIZON WEBSITE — TWO SEPARATE DIVISIONS
+ELITE HORIZON WEBSITE — UPDATED UI/UX PACKAGE
 
 Files:
-- index.html: main landing page with two separate clickable division cards
+- index.html: main division-selection homepage
 - consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
 - trading.html: Elite Horizon Trading and Consulting Company
-- assets/: website images and the separate logos supplied for each division
+- assets/: logos and supplied website imagery
 
-The Trading page content/layout is preserved; the division selector and logo placement have been updated to match the supplied logos and green/gold + blue/orange brand palettes.
+How to use:
+1. Extract this ZIP while preserving the assets folder.
+2. Open index.html to preview locally, or upload all files/folders to the same website root on your hosting.
+3. Keep the three HTML files in the same folder and the assets folder beside them.
 
-LOCAL PREVIEW: Extract this ZIP and open index.html.
-DEPLOYMENT: Upload the CONTENTS of this folder to the website hosting public root. Keep index.html, trading.html, consultancy.html and assets/ together. Do not upload the ZIP itself as the website.
+Both divisions now use a consistent Elite Horizon green-and-gold theme, with responsive layouts for desktop and mobile.
