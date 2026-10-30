@@ -1,12 +1,16 @@
-ELITE HORIZON — TWO DIVISIONS WEBSITE
+ELITE HORIZON PREMIUM WEBSITE
 
-Files:
-- index.html: division selector / home page
-- consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
-- trading.html: Elite Horizon Trading and Consulting Company
-- assets/: existing supplied catalogue photos and logo assets, kept unchanged
+Files included:
+- index.html: homepage with both divisions
+- consultancy.html: Business Setup & Strategic Consultancy page
+- trading.html: Trading and Consulting Company page
+- style.css: responsive premium styling
+- script.js: mobile menu and current year
+- assets/: logos and image assets
 
-Colour system across both divisions: dark green, gold, and white.
-The original catalogue images in assets/ have not been edited or replaced.
+HOW TO VIEW
+1. Extract the ZIP file.
+2. Open index.html in Chrome, Edge, Firefox or Safari.
+3. Click each division card/button to open its separate page.
 
-To preview: open index.html in a browser. Keep the assets folder next to the HTML files.
+The website is responsive for desktop and mobile. The homepage uses the dark green, gold, white and soft neutral palette from the reference design. Existing asset photographs are included locally; Google Fonts may require internet access, with system font fallbacks provided.
