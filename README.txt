@@ -1,16 +1,21 @@
-ELITE HORIZON PREMIUM WEBSITE
+ELITE HORIZON WEBSITE - UPDATED PACKAGE
 
-Files included:
-- index.html: homepage with both divisions
-- consultancy.html: Business Setup & Strategic Consultancy page
-- trading.html: Trading and Consulting Company page
-- style.css: responsive premium styling
-- script.js: mobile menu and current year
-- assets/: logos and image assets
+Files
+- index.html: homepage with two division cards and matching logos
+- consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
+- trading.html: Elite Horizon Trading and Consulting Company
+- assets/: logos and all background/category images
 
-HOW TO VIEW
+What was updated
+- Consultancy division uses the supplied Riyadh skyline background.
+- Trading division uses the supplied food, packaging, safety, technology and frozen-products collage.
+- Correct consultancy logo is used; the existing trading logo is preserved.
+- Both divisions use the same green, gold, white and soft-neutral palette.
+- Responsive layouts for desktop, tablet and mobile.
+
+How to preview
 1. Extract the ZIP file.
-2. Open index.html in Chrome, Edge, Firefox or Safari.
-3. Click each division card/button to open its separate page.
+2. Open index.html in a browser.
+3. Select either division card to open its full page.
 
-The website is responsive for desktop and mobile. The homepage uses the dark green, gold, white and soft neutral palette from the reference design. Existing asset photographs are included locally; Google Fonts may require internet access, with system font fallbacks provided.
+No build tools or installation are required.
