@@ -1,21 +1,18 @@
-ELITE HORIZON WEBSITE - UPDATED PACKAGE
+ELITE HORIZON WEBSITE — TWO DIVISIONS
 
-Files
-- index.html: homepage with two division cards and matching logos
-- consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
+Files are arranged at the correct website root level.
+
+- index.html: landing page with two separate clickable divisions
 - trading.html: Elite Horizon Trading and Consulting Company
-- assets/: logos and all background/category images
+- consultancy.html: Elite Horizon Business Setup & Strategic Consultancy
+- assets/: images and logo used by the pages
 
-What was updated
-- Consultancy division uses the supplied Riyadh skyline background.
-- Trading division uses the supplied food, packaging, safety, technology and frozen-products collage.
-- Correct consultancy logo is used; the existing trading logo is preserved.
-- Both divisions use the same green, gold, white and soft-neutral palette.
-- Responsive layouts for desktop, tablet and mobile.
+LOCAL PREVIEW: Extract the ZIP and open index.html.
+DEPLOYMENT: Upload the CONTENTS of this folder to your website hosting public root (for GitHub Pages, commit index.html, trading.html, consultancy.html, and assets/ to the repository root). Do not upload the outer ZIP or put all files inside an extra elite_final folder.
 
-How to preview
-1. Extract the ZIP file.
-2. Open index.html in a browser.
-3. Select either division card to open its full page.
-
-No build tools or installation are required.
+LOGO UPDATE (2026-10):
+- consultancy.html uses assets/consultancy-logo.png (the supplied green/gold Elite Horizon logo).
+- trading.html uses assets/trading-logo.png (the supplied blue/green/gold Trading and Consulting Company logo).
+- index.html shows the matching logo on each division card.
+- The previous shared logo is no longer used for the three main page headers/cards.
+Open index.html locally to preview. Upload all files and the assets folder to the website root.
