@@ -14,6 +14,36 @@
 .brandmark img{display:block;width:auto;height:auto;max-width:min(245px,calc(100vw - 100px));max-height:64px;object-fit:contain}
 @media(max-width:700px){.brandmark{left:14px;top:14px;padding:8px 10px}.brandmark img{max-width:190px;max-height:52px}}
 
+
+/* Reference-inspired stacked division landing panels */
+body{background:#f7f9fc}
+.top{padding:22px 5% 18px}
+.top h1{margin:7px 0 5px;font-size:clamp(24px,3vw,36px)}
+.choices{width:min(1500px,100%);margin:0 auto 22px;display:flex;flex-direction:column;gap:18px;padding:0 18px}
+.division{min-height:0;display:grid;grid-template-columns:1fr;overflow:hidden;border-radius:22px;background:#fff;box-shadow:0 14px 38px #14223b14}
+.visual{height:clamp(290px,37vw,430px);background-position:center;background-size:cover;position:relative}
+.visual:before{background:linear-gradient(90deg,rgba(255,255,255,.98) 0%,rgba(255,255,255,.88) 35%,rgba(255,255,255,.28) 62%,rgba(255,255,255,0) 100%)}
+.visual:after{display:none}
+.consultancy .visual{background-image:url('assets/consultancy-skyline.png')}
+.trading .visual{background-image:url('assets/trading-industrial-collage.png')}
+.brandmark{left:30px;top:24px;background:#ffffffd9;z-index:4}
+.visual-title{left:clamp(24px,6vw,82px);bottom:32px;max-width:580px;z-index:3}
+.visual-title h2{font-size:clamp(30px,4.5vw,58px);max-width:560px}
+.division{position:relative}
+.division:before{content:"";position:absolute;z-index:2;left:-105px;top:50%;transform:translateY(-50%);width:310px;height:310px;background:url('assets/consultancy-emblem-outline.png') center/contain no-repeat;opacity:.28;pointer-events:none}
+.division.trading:before{background-image:url('assets/trading-emblem-outline.png');width:350px;height:310px;left:-120px;opacity:.25}
+.body{padding:24px clamp(24px,6vw,82px) 28px}
+.foot{padding:13px clamp(24px,6vw,82px)}
+@media(max-width:700px){
+ .top{padding:18px 14px 14px}.choices{padding:0 10px;gap:12px}
+ .visual{height:300px}.brandmark{left:15px;top:14px}
+ .visual-title{left:20px;right:18px;bottom:22px}
+ .visual-title h2{font-size:34px}
+ .division:before{left:-150px;width:270px;height:270px}
+ .division.trading:before{left:-160px;width:300px;height:270px}
+ .body{padding:22px 20px}.foot{padding:13px 20px}
+}
+
 </style></head>
 <body>
 <header class="top"><div class="eyebrow">TWO DIVISIONS · ONE ELITE HORIZON</div><h1>Explore Elite Horizon</h1><p>Choose the division that matches your business needs. Each section opens on its own dedicated website page.</p></header>
