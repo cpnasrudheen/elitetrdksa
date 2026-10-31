@@ -1,13 +1,14 @@
-ELITE HORIZON - PREMIUM TWO-DIVISION LANDING PAGE
+ELITE HORIZON – TWO DIVISIONS WEBSITE
 
-Open index.html to view the two-division landing page.
-The landing page uses separate brand logos and decorative emblems for each division, plus the supplied Riyadh skyline and trading/product collage backgrounds.
+Open index.html in a browser to view the two-division landing page.
 
 Files:
-- index.html: landing page
+- index.html: main two-card landing page (equal-height side-by-side layout)
 - consultancy.html: Business Setup & Strategic Consultancy page
 - trading.html: Trading and Consulting Company page
-- assets/: all required images, logos, icons and supporting assets
+- assets/: logos, background images, watermark emblems, and category images
 
-Keep the assets folder beside the HTML files. Do not move or rename the images.
-The page is responsive for desktop, tablet and mobile screens.
+The landing page uses the supplied Elite Horizon division logos and images.
+For best results, keep the assets folder beside the HTML files.
+
+To publish: upload the complete folder contents to your hosting public root.
