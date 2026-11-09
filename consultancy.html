@@ -17,6 +17,10 @@ main{max-width:1240px;margin:auto;padding:100px 26px 120px}.section-head{text-al
 .services{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.service{min-height:180px}.service .symbol{color:var(--gold);font-size:27px;margin-bottom:18px}.service h3{font-size:17px;margin-bottom:10px}.service p{font-size:12px}
 .parallax-band{position:relative;min-height:430px;margin:115px calc(50% - 50vw);overflow:hidden;display:flex;align-items:center;padding:70px max(7vw,30px);isolation:isolate}.parallax-band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2;transform:scale(1.08);will-change:transform}.parallax-band:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,24,18,.93),rgba(3,24,18,.62),rgba(3,24,18,.28));z-index:-1}.band-copy{max-width:720px}.band-copy h2{font-size:clamp(32px,5vw,58px);line-height:1.08;margin:0 0 18px}.band-copy p{color:#e0e7e2;line-height:1.8;max-width:600px}
 .cta-panel{text-align:center;padding:clamp(35px,6vw,75px);border:1px solid #d7ad4b66;border-radius:30px;background:radial-gradient(circle at 90% 0,#d7ad4b20,transparent 38%),linear-gradient(135deg,#103c2f,#071b17);box-shadow:0 20px 65px #0004}.cta-panel h2{font-size:clamp(32px,5vw,56px);margin:0 0 18px}.cta-panel p{max-width:650px;margin:0 auto 28px;color:var(--muted);line-height:1.8}.footer{padding:28px 20px;text-align:center;color:#87978e;border-top:1px solid #ffffff16;font-size:11px;letter-spacing:.08em}
+/* Kingdom Centre background: starts at Our Expertise and pans top to bottom as you scroll */
+.bgwrap{position:relative;clip-path:inset(0)}
+.bgfix{position:fixed;inset:0;z-index:0;pointer-events:none;background:linear-gradient(rgba(7,27,23,.80),rgba(7,27,23,.88)),url(assets/bg-kingdom.jpg) center 0%/cover no-repeat}
+.bgwrap>.content{position:relative;z-index:1}
 @media(max-width:760px){.hero{padding:100px 23px 85px;align-items:center}.hero:before{background:linear-gradient(180deg,rgba(3,22,17,.55),rgba(3,22,17,.92))}.logo{width:250px;margin-bottom:28px}.topnav{padding:15px 18px}.feature-row{grid-template-columns:1fr;gap:16px}.feature-row .glass-card:nth-child(2){margin-top:0}.services{grid-template-columns:1fr 1fr}.parallax-band{min-height:380px;padding:55px 24px;margin-top:80px;margin-bottom:80px}main{padding:75px 18px 90px}.section-head{margin-bottom:40px}}
 @media(max-width:430px){.services{grid-template-columns:1fr}.glass-card{padding:25px}.topnav strong{font-size:9px}.topnav a{font-size:9px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation:none!important;transition:none!important}}
@@ -29,6 +33,7 @@ main{max-width:1240px;margin:auto;padding:100px 26px 120px}.section-head{text-al
 <div class="hero-content reveal-up"><img class="logo" src="assets/consultancy-logo.png" alt="Elite Horizon Business Setup & Strategic Consultancy"><div class="eyebrow">Business Setup · Strategic Consultancy</div><h1>Build Your Business<br><span>in Saudi Arabia.</span></h1><p>Professional support for every stage of your business journey — from company formation and government procedures to compliance and strategic growth.</p><div class="actions"><a class="btn" href="#expertise">Explore Services <b>↓</b></a><a class="btn secondary" href="#contact">Get in Touch <b>→</b></a></div></div>
 <div class="scrollhint">Scroll to explore<span>⌄</span></div>
 </header>
+<div class="bgwrap" id="bgwrap"><div class="bgfix" id="bgfix" aria-hidden="true"></div><div class="content">
 <main>
 <section id="expertise">
 <div class="section-head reveal-up"><div class="eyebrow">Our Expertise</div><h2>Guidance that moves<br><span>your business forward.</span></h2><p>From your first registration to day-to-day corporate requirements, our team helps you navigate the business environment in Saudi Arabia.</p></div>
@@ -59,10 +64,13 @@ main{max-width:1240px;margin:auto;padding:100px 26px 120px}.section-head{text-al
 <section class="parallax-band"><img id="parallax-image" src="assets/riyadh-tower-background.png" alt="Riyadh city skyline and Kingdom Centre"><div class="band-copy reveal-left"><div class="eyebrow">Your Partner in Saudi Arabia</div><h2>Local understanding.<br>Professional direction.</h2><p>Move forward with a partner focused on making business setup and corporate processes clearer, more manageable and more efficient.</p></div></section>
 <section id="contact" class="cta-panel reveal-up" style="max-width:1100px;margin:100px auto;padding-left:25px;padding-right:25px"><div class="eyebrow">Start Your Business Journey</div><h2>Ready for your next step?</h2><p>Connect with Elite Horizon Business Setup & Strategic Consultancy for professional guidance and support in Saudi Arabia.</p><a class="btn" href="index.html">Back to Elite Horizon <b>←</b></a></section>
 <footer class="footer">© ELITE HORIZON · BUSINESS SETUP & STRATEGIC CONSULTANCY · KINGDOM OF SAUDI ARABIA</footer>
+</div></div>
 <script>
-(()=>{const bar=document.getElementById('progress-fill'),items=document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right,.reveal-zoom'),img=document.getElementById('parallax-image');const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+(()=>{const bar=document.getElementById('progress-fill'),items=document.querySelectorAll('.reveal-up,.reveal-left,.reveal-right,.reveal-zoom'),img=document.getElementById('parallax-image'),wrap=document.getElementById('bgwrap'),bg=document.getElementById('bgfix');const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('active');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -7% 0px'});items.forEach(el=>observer.observe(el))}else{items.forEach(el=>el.classList.add('active'))}
-let busy=false;function scrollFX(){const max=document.documentElement.scrollHeight-innerHeight,p=max>0?scrollY/max:0;bar.style.width=(p*100)+'%';if(!reduced&&img){const rect=img.parentElement.getBoundingClientRect();img.style.transform=`scale(1.12) translateY(${(rect.top-innerHeight/2)*-.045}px)`}busy=false}
+let busy=false;function scrollFX(){const max=document.documentElement.scrollHeight-innerHeight,p=max>0?scrollY/max:0;bar.style.width=(p*100)+'%';if(!reduced&&img){const rect=img.parentElement.getBoundingClientRect();img.style.transform=`scale(1.12) translateY(${(rect.top-innerHeight/2)*-.045}px)`}
+if(wrap&&bg){const r=wrap.getBoundingClientRect(),span=r.height-innerHeight,q=span>0?Math.min(1,Math.max(0,-r.top/span)):0;bg.style.backgroundPosition='center '+(q*100)+'%'}
+busy=false}
 window.addEventListener('scroll',()=>{if(!busy){requestAnimationFrame(scrollFX);busy=true}},{passive:true});window.addEventListener('resize',scrollFX);scrollFX();
 })();
 </script>
